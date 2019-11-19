@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Item from './item';
 
 import ItemsListContext from '../context/items-context';
-import ItemsApiService from '../context/items-api-service';
+import ItemsApiService from '../Services/items-api-service';
 
 
 

@@ -3,12 +3,13 @@ import { Route } from 'react-router-dom'
 import './App.css';
 import itemListPage from './items/items-list';
 import bagsListPage from './bags/bags-list';
-import LandingPage from './landing-page/landing-page';
-import MyBagsPage from './myBags/my-bags';
-import SituationPage from './situation-page/situation-page'
-import SignupPage from './sign-up/sign-up';
-import BagHomePage from './bag-home-page/bag-home-page';
-import PageNotFound from './404-page/page-not-found';
+import LandingPage from './routes/landing-page/landing-page';
+import MyBagsPage from './routes/myBags/my-bags';
+import SituationPage from './routes/situation-page/situation-page'
+import SignupPage from './routes/sign-up/sign-up';
+import BagHomePage from './routes/bag-home-page/bag-home-page';
+import LoginPage from '../src/routes/LoginPage/LoginPage';
+//import PageNotFound from './routes/404-page/page-not-found';
 
 class App extends Component {
   render(){
@@ -43,6 +44,11 @@ class App extends Component {
           exact
           path={'/sign-up'}
           component={SignupPage}
+        />
+        <Route
+          exact
+          path={'/login'}
+          component={LoginPage}
         />
         <Route
           exact

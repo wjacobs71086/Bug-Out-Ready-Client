@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import './bag-home-page';
-import ItemsListContext from '../context/items-context';
-import BagsApiService from '../context/bags-api-service';
-import Item from '../items/items-list';
-import ItemsApiService from '../context/items-api-service';
+import ItemsListContext from '../../context/items-context';
+import BagsApiService from '../../Services/bags-api-service';
+import Item from '../../items/items-list';
+import ItemsApiService from '../../Services/items-api-service';
 
 export class BagHomePage extends Component {
     static contextType = ItemsListContext;

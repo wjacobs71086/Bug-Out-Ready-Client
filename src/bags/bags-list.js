@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Bag from './bags';
 
 import ItemsListContext from '../context/items-context';
-import BagsApiService from '../context/bags-api-service';
+import BagsApiService from '../Services/bags-api-service';
 
 
 

@@ -15,7 +15,6 @@ const BagsApiService = {
       )
   },
   getThing(bagId) {
-    console.log()
     return fetch(`${config.API_ENDPOINT}/bag-home/${bagId}`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`,
@@ -28,7 +27,6 @@ const BagsApiService = {
       })
   },
   getBagsItems(bagId) {
-    console.log(`${config.API_ENDPOINT}/bag-home/${bagId}`);
     return fetch(`${config.API_ENDPOINT}/bag-home/${bagId}`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`,
