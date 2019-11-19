@@ -25,7 +25,9 @@ const ItemsApiService = {
           ? res.json().then(e => Promise.reject(e))
           : res.json()
       )
-  }
+  },
+  
+
 
 }
 
