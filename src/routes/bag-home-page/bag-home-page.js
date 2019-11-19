@@ -9,7 +9,7 @@ export class BagHomePage extends Component {
     static contextType = ItemsListContext;
 
     componentDidMount() {
-
+        console.log(this.props);
         this.context.clearError()
         BagsApiService.getBagsItems(this.props.match.params.bag_id)
         .then(this.context.setBagsList)
@@ -44,15 +44,7 @@ export class BagHomePage extends Component {
                 <button className="signout">sign out</button>
                 <button>change bag</button>
                     <img className="logo" src="../bags_bag_handbag_accessory_accessories-19-512.png" alt="bag" />
-                    <h3>My Fire Bag Checklist</h3>
-
-                    <h5>Remaining items</h5>
-                    <ul className="itemList">
-                        <li>Tent <span> ~ $15.00</span><img className="icon" src="../trash_icon" alt="not sure"/> </li>
-                        <li>Sleeping bag <span> ~ $15.00</span></li>
-                        <li>Duct Tape <span> ~ $15.00</span></li>
-                        <li>Knife <span> ~ $15.00</span></li>
-                    </ul>
+                {/* {this.renderItems()} */}
             </div>
         )
     }

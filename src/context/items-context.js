@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 const ItemsListContext = React.createContext({
   itemsList: [],
   bagsList: [],
+  userId: [],
   error: null,
   setError: () => {},
   clearError: () => {},
@@ -20,6 +21,10 @@ export class ItemsListProvider extends Component {
 
   setItemsList = itemsList => {
     this.setState({ itemsList })
+  }
+
+  setUser = userId => {
+    this.setState({ userId })
   }
 
   setBagsList = bagsList => {
@@ -44,6 +49,7 @@ export class ItemsListProvider extends Component {
       setItemsList: this.setItemsList,
       setBagsList: this.setBagsList,
       bagsList: this.state.bagsList,
+      userId: this.state.userId,
     }
     return (
       <ItemsListContext.Provider value={value}>

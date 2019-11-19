@@ -27,6 +27,7 @@ const BagsApiService = {
       })
   },
   getBagsItems(bagId) {
+    //console.log('getbagItems is passing as bagId', bagId)
     return fetch(`${config.API_ENDPOINT}/bag-home/${bagId}`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`,

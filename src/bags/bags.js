@@ -1,11 +1,20 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 
 export class Bag extends Component {
+    static defaultProps = {
+        match: { params: {} },
+      }
+
     render() {
-        const { bagName  } = this.props;
+        const { bagName,bagId } = this.props;
+        console.log('bagId in the bag component',this.props);
         return (
             <div>
-                <h5>{bagName}</h5>
+                <Link
+                    to={`/bag-home/${bagId}`}
+                ><h5>{bagName}</h5>
+                </Link>
                 <p></p>
  
             </div>

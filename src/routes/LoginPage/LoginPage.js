@@ -11,10 +11,10 @@ export class LoginPage extends Component {
         },
       }
       handleLoginSuccess = () => {
-        const { location, history } = this.props
-        const destination = (location.state || {}).from || '/'
-        history.push(destination)
-      }
+        const { location, history, user_id } = this.props;
+        const destination = (location.state || {}).from || '/bags';
+        history.push(destination);
+        }
     render() {
         return (
             <div>
