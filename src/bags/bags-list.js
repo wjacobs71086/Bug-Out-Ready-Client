@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Bag from './bags';
 import { Link } from 'react-router-dom';
-import SituationsPage, { SituationPage } from '../routes/situation-page/situation-page';
 import ItemsListContext from '../context/items-context';
 import BagsApiService from '../Services/bags-api-service';
 

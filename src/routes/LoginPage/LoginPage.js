@@ -11,7 +11,7 @@ export class LoginPage extends Component {
         },
       }
       handleLoginSuccess = () => {
-        const { location, history, user_id } = this.props;
+        const { location, history} = this.props;
         const destination = (location.state || {}).from || '/bags';
         history.push(destination);
         }

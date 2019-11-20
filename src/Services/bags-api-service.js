@@ -38,7 +38,22 @@ const BagsApiService = {
           ? res.json().then(e => Promise.reject(e))
           : res.json()
       )
-  }
+  },
+  createNewBag(bag_name,situations){
+    console.log(bag_name);
+    return fetch(`${config.API_ENDPOINT}/situations`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
+      },
+      body: JSON.stringify(bag_name, situations)
+    }).then(res => 
+      (!res.ok) 
+          ? res.json().then(e => Promise.reject(e) )
+          : res.json()
+  );
+  },
 
 }
 
