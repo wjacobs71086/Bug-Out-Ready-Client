@@ -26,9 +26,6 @@ const ItemsApiService = {
           : res.json()
       )
   },
-  
-
-
 }
 
 export default ItemsApiService;

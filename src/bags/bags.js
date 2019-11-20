@@ -8,7 +8,6 @@ export class Bag extends Component {
 
     render() {
         const { bagName,bagId } = this.props;
-        console.log('bagId in the bag component',this.props);
         return (
             <div>
                 <Link

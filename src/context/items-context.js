@@ -23,10 +23,6 @@ export class ItemsListProvider extends Component {
     this.setState({ itemsList })
   }
 
-  setUser = userId => {
-    this.setState({ userId })
-  }
-
   setBagsList = bagsList => {
     this.setState({ bagsList })
   }
