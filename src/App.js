@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import './App.css';
 import itemListPage from './items/items-list';
 import bagsListPage from './bags/bags-list';
@@ -15,6 +15,7 @@ class App extends Component {
   render(){
   return (
     <div className="App">
+      <Switch>
         <Route
           exact
           path={'/'}
@@ -55,7 +56,7 @@ class App extends Component {
           path={'/bag-home/:bag_id'}
           component={BagHomePage}
         />
-
+</Switch>
     </div>
   );
 }

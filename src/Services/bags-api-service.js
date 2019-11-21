@@ -39,7 +39,7 @@ const BagsApiService = {
           : res.json()
       )
   },
-  createNewBag(bag_name,situations){
+  createNewBag(bag_name, situations) {
     console.log(bag_name);
     return fetch(`${config.API_ENDPOINT}/situations`, {
       method: 'POST',
@@ -48,11 +48,12 @@ const BagsApiService = {
         'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
       body: JSON.stringify(bag_name, situations)
-    }).then(res => 
-      (!res.ok) 
-          ? res.json().then(e => Promise.reject(e) )
-          : res.json()
-  );
+    }).then(res =>
+      (!res.ok)
+        ? res.json().then(e => Promise.reject(e))
+        : res.json()
+    )
+      .then(res => res.bag_id);
   },
 
 }

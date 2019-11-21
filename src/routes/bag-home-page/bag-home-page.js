@@ -22,7 +22,7 @@ export class BagHomePage extends Component {
 
     renderBagItems() {
         const { bagsList = [] } = this.context;
-        console.log(bagsList);
+        //console.log(bagsList);
 
         return bagsList.map(item => <Item
             key={Math.random()}

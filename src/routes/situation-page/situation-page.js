@@ -10,7 +10,9 @@ export class SituationPage extends Component {
                 <img className="logo" src="../bags_bag_handbag_accessory_accessories-19-512.png" alt="bag" />
                 
                 <h3>What type of event are you wanting to prepare for?</h3>
-            <NewBagForm></NewBagForm>
+            <NewBagForm
+                history={this.props.history}
+            ></NewBagForm>
             </div>
         )
     }

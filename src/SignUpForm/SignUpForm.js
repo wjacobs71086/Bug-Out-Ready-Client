@@ -10,14 +10,13 @@ export default class SignUpForm extends Component {
 
   handleSubmit = ev => {
     ev.preventDefault()
-    const { full_name, nick_name, user_name, password } = ev.target
-
+    const {user_name, password } = ev.target
+    let newUser = {user_name: user_name.value, password:password.value};
     console.log('Sign-up form submitted')
-    console.log({ full_name, nick_name, user_name, password })
-
+    console.log(newUser);
+    this.props.onSignUpSuccess(newUser)
     user_name.value = ''
     password.value = ''
-    this.props.onSignUpSuccess()
   }
 
   render() {

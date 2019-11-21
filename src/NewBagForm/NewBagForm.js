@@ -19,11 +19,12 @@ export default class NewBagForm extends Component {
     BagsApiService.createNewBag({
         bag_name: bag_name.value,
         situations: situations.value
-    });
+    })
+    .then(bag_id => this.props.history.push(`/bag-home/${bag_id}`))
+    ;
 
     bag_name.value = ''
     situations.value= ''
-
     
     // Run on success
 

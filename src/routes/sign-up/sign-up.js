@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './sign-up.css';
 import SignUpForm from '../../SignUpForm/SignUpForm';
+import AuthService from '../../Services/auth-api-service';
 
 export class SignupPage extends Component {
     static defaultProps = {
@@ -10,6 +11,8 @@ export class SignupPage extends Component {
       }
     
       handleSignUpSuccess = user => {
+        console.log('handlesign up success is being called');
+        AuthService.createUserCall(user);
         const { history } = this.props
         history.push('/login')
       }
