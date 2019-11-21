@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './my-bags.css';
+//import './my-bags.css';
 
 export class MyBagsPage extends Component {
     render() {

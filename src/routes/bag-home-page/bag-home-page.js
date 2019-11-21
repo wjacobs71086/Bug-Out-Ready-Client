@@ -3,10 +3,10 @@ import './bag-home-page';
 import ItemsListContext from '../../context/items-context';
 import BagsApiService from '../../Services/bags-api-service';
 import Item from '../../items/item';
-import ItemsApiService from '../../Services/items-api-service';
+//import ItemsApiService from '../../Services/items-api-service';
 import TokenService from '../../Services/token-service';
 import { Link } from 'react-router-dom';
-import { thisExpression, isTSAnyKeyword } from '@babel/types';
+//import { thisExpression, isTSAnyKeyword } from '@babel/types';
 
 export class BagHomePage extends Component {
     static contextType = ItemsListContext;
@@ -71,11 +71,12 @@ export class BagHomePage extends Component {
       //a.reduce( function(cnt,o){ return cnt + o.level; }, 0)
       let remainingCost = itemsList.reduce(function(cnt, o){ return cnt + parseInt(o.est_cost); }, 0);
 
-      console.log(remainingCost);
+      //console.log(remainingCost);
       return (
       <h4> Estimated Cost for remaining items ${remainingCost}</h4>
       )
     }
+
     render() {
         return (
             <div>

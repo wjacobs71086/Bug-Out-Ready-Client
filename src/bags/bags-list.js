@@ -16,6 +16,8 @@ export class BagsList extends Component {
         .catch(this.context.setError)
     }
 
+
+
   renderBags() {
     const { bagsList = [] } = this.context;
     return bagsList.map(bag =>

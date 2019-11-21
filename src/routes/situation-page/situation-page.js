@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './situation-page.css';
+//import './situation-page.css';
 import NewBagForm from '../../NewBagForm/NewBagForm';
 
 export class SituationPage extends Component {

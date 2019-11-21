@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Input } from '../Utils/Utils';
-import TokenService from '../Services/token-service';
-import AuthApiService from '../Services/auth-api-service';
+//import TokenService from '../Services/token-service';
+//import AuthApiService from '../Services/auth-api-service';
 import BagsApiService from '../Services/bags-api-service';
 
 export default class NewBagForm extends Component {
@@ -20,9 +20,7 @@ export default class NewBagForm extends Component {
         bag_name: bag_name.value,
         situations: situations.value
     })
-    .then(bag_id => this.props.history.push(`/bag-home/${bag_id}`))
-    ;
-
+    .then(bag_id => this.props.history.push(`/bag-home/${bag_id}`));
     bag_name.value = ''
     situations.value= ''
     

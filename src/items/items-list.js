@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Item from './item';
+//import Item from './item';
 
 import ItemsListContext from '../context/items-context';
 import ItemsApiService from '../Services/items-api-service';
