@@ -18,15 +18,18 @@ export class ItemsList extends Component {
 
   renderItems() {
     const { itemsList = [] } = this.context;
+    console.log(itemsList);
     return itemsList.map(item =>
-      <Item
-        key={item.id}
-        itemName={item.item_name}
-        itemUrl={item.url}
-        itemImg={item.img}
-        itemDesc={item.description}
-        itemCost={item.est_cost}
-      />
+      console.log(item)
+      // <Item
+      //   key={item.id}
+      //   itemName={item.item_name}
+      //   itemUrl={item.url}
+      //   itemImg={item.img}
+      //   itemDesc={item.description}
+      //   itemCost={item.est_cost}
+      //   itemOwned={item.owned}
+      // />
     )
   }
 

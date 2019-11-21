@@ -27,7 +27,6 @@ const BagsApiService = {
       })
   },
   getBagsItems(bagId) {
-    //console.log('getbagItems is being called')
     return fetch(`${config.API_ENDPOINT}/bag-home/${bagId}`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`,
