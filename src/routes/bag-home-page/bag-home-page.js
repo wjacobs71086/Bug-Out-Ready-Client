@@ -27,7 +27,7 @@ export class BagHomePage extends Component {
 
     renderLogoutLink() {
         return (
-          <div className='Header__logged-in'>
+          <div className='Heading_links'>
             <Link
               onClick={this.handleLogoutClick}
               to='/login'>
@@ -36,6 +36,17 @@ export class BagHomePage extends Component {
           </div>
         )
       }
+      renderSwitchBagLink() {
+        return (
+          <div className='Heading_links'>
+            <Link
+              to='/bags'>
+              Switch Bag
+            </Link>
+          </div>
+        )
+      }
+
     renderBagItems() {
         const { bagsList = [] } = this.context;
         //console.log(bagsList);
@@ -57,7 +68,7 @@ export class BagHomePage extends Component {
         return (
             <div>
                 {this.renderLogoutLink()}
-                <button>change bag</button>
+                {this.renderSwitchBagLink()}
                 <img className="logo" src="../bags_bag_handbag_accessory_accessories-19-512.png" alt="bag" />
                 {this.renderBagItems()}
             </div>
