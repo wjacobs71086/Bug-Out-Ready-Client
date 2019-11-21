@@ -31,7 +31,7 @@ export default class NewBagForm extends Component {
 
   renderInputs() {
     console.log(this.props);
-      const situations = ['quake','flood', 'fire', 'anything'];
+      const situations = ['Quake','Flood', 'Fire', 'any'];
       return situations.map(sit => 
         <div className='situation' key={Math.random()}>
         <label htmlFor='NewBagForm__situation'>
