@@ -4,22 +4,38 @@ import ItemsListContext from '../../context/items-context';
 import BagsApiService from '../../Services/bags-api-service';
 import Item from '../../items/item';
 import ItemsApiService from '../../Services/items-api-service';
+import TokenService from '../../Services/token-service';
+import { Link } from 'react-router-dom';
 
 export class BagHomePage extends Component {
     static contextType = ItemsListContext;
 
     componentDidMount() {
-        
+
         this.context.clearError();
         BagsApiService.getBagsItems(this.props.match.params.bag_id)
-        .then(res =>{
-            this.context.setItemsList(res)
-            this.context.setBagsList(res)
-        })
-        .catch(this.context.setError)
+            .then(res => {
+                this.context.setItemsList(res)
+                this.context.setBagsList(res)
+            })
+            .catch(this.context.setError)
 
     }
+    handleLogoutClick = () => {
+        TokenService.clearAuthToken();
+    }
 
+    renderLogoutLink() {
+        return (
+          <div className='Header__logged-in'>
+            <Link
+              onClick={this.handleLogoutClick}
+              to='/login'>
+              Logout
+            </Link>
+          </div>
+        )
+      }
     renderBagItems() {
         const { bagsList = [] } = this.context;
         //console.log(bagsList);
@@ -40,9 +56,9 @@ export class BagHomePage extends Component {
     render() {
         return (
             <div>
-                <button className="signout">sign out</button>
+                {this.renderLogoutLink()}
                 <button>change bag</button>
-                    <img className="logo" src="../bags_bag_handbag_accessory_accessories-19-512.png" alt="bag" />
+                <img className="logo" src="../bags_bag_handbag_accessory_accessories-19-512.png" alt="bag" />
                 {this.renderBagItems()}
             </div>
         )
