@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Input } from '../Utils/Utils';
-//import TokenService from '../Services/token-service';
-//import AuthApiService from '../Services/auth-api-service';
 import BagsApiService from '../Services/bags-api-service';
 
 export default class NewBagForm extends Component {
@@ -23,30 +21,27 @@ export default class NewBagForm extends Component {
     .then(bag_id => this.props.history.push(`/bag-home/${bag_id}`));
     bag_name.value = ''
     situations.value= ''
-    
-    // Run on success
-
   }
 
-  renderInputs() {
-    console.log(this.props);
-      const situations = ['Quake','Flood', 'Fire', 'any'];
-      return situations.map(sit => 
-        <div className='situation' key={Math.random()}>
-        <label htmlFor='NewBagForm__situation'>
-          {sit}
-        </label>
-        <Input
-          required
-          key={Math.random()}
-          name={'situations'}
-          type='radio'
-          value={sit}
-          id={`NewBagForm__${sit}`}>
-        </Input>
-      </div>
-        )
-  }
+  // renderInputs() {
+  //   console.log(this.props);
+  //     const situations = ['Quake','Flood', 'Fire', 'any'];
+  //     return situations.map(sit => 
+  //       <div className='situation' key={Math.random()}>
+  //       <label htmlFor='NewBagForm__situation'>
+  //         {sit}
+  //       </label>
+  //       <Input
+  //         required
+  //         key={Math.random()}
+  //         name={'situations'}
+  //         type='radio'
+  //         value={sit}
+  //         id={`NewBagForm__${sit}`}>
+  //       </Input>
+  //     </div>
+  //       )
+  // }
 
   render() {
     const { error } = this.state
@@ -68,7 +63,14 @@ export default class NewBagForm extends Component {
             id='NewBagForm__bag_name'>
           </Input>
         </div>
-        {this.renderInputs()}
+
+        <select required name="situations">
+          <option value="any">All Purpose</option>
+          <option value="Quake">Earthquake</option>
+          <option value="Fire">Wild Fire</option>
+          <option value="Flood">Flash Flood</option>
+        </select>
+
         <Button type='submit'>
           Submit
         </Button>
