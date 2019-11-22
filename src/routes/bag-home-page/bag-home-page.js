@@ -22,6 +22,7 @@ export class BagHomePage extends Component {
             .catch(this.context.setError)
 
     }
+
     handleLogoutClick = () => {
         TokenService.clearAuthToken();
     }
@@ -78,6 +79,8 @@ export class BagHomePage extends Component {
     }
 
     render() {
+      const { bagName, bagId } = this.props;
+      console.log(this.context);
         return (
             <div>
                 {this.renderCostRemainingItems()}

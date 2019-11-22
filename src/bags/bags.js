@@ -11,24 +11,22 @@ export class Bag extends Component {
         const bag_id = id.target.value;
         console.log('this is the bag_id to delete',  bag_id);
         BagsApiService.deleteBag(bag_id);
-      }
+        window.location.reload(false);
+    }
 
     render() {
-        //console.log(this.props);
         const { bagName, bagId } = this.props;
-        //console.log(this.props.bagId);
         return (
             <div>
                 <Link
-                    to={`/bag-home/${bagId}`}
-                ><h5>{bagName}</h5>
+                    to={`/bag-home/${bagId}`}>
+                        <h5>{bagName}</h5>
                 </Link>
-        <button
-            value={bagId}
-            onClick={this.handleDeleteBag}
-            >Delete {bagName}
-        </button>
- 
+                <button
+                    value={bagId}
+                    onClick={this.handleDeleteBag}
+                    >Delete {bagName}
+                </button>
             </div>
         )
     }
