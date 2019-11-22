@@ -58,13 +58,17 @@ export class BagHomePage extends Component {
     itemOwnedStatus = (itemOwnedStatus === "true");
     let changedOwnedStatus = !itemOwnedStatus;
     const item_id = ev.target.name;
-    //console.log('owned status was passed in as', itemOwnedStatus, 'with a type of', typeof itemOwnedStatus);
+
     BagsApiService.updateBagItem(bag_id, item_id, changedOwnedStatus)
       .then(response => {
         if (response) {
           console.log(response);
-          //ev.target.value = response;
-          this.renderBagItems();
+          BagsApiService.getBagsItems(this.props.match.params.bag_id)
+            .then(res => {
+              this.context.setItemsList(res)
+              this.context.setBagsList(res)
+            })
+            .catch(this.context.setError)
         } else {
           console.log('thats a negative ghost rider');
         }

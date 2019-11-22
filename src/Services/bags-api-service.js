@@ -71,10 +71,6 @@ const BagsApiService = {
       )
   },
   updateBagItem(bag_id, item_id, owned){
-    // console.log('Update Bag Item function was called');
-    // console.log('bag_id was passed in as', bag_id, 'with a type of', typeof bag_id);
-    // console.log('item_id was passed in as', item_id, 'with a type of', typeof item_id);
-    // console.log('owned was passed in as', owned, 'with a type of', typeof owned);
     return fetch(`${config.API_ENDPOINT}/bag-home/${bag_id}`, {
       method: 'PATCH',
       headers:{
