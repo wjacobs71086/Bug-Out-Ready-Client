@@ -8,8 +8,7 @@ export class item extends Component {
 
     render() {
         
-        const { itemName, itemUrl, itemImg, itemDesc, itemCost, itemOwned, itemId } = this.props;
-        //console.log(this.props.itemId)
+        const { itemName, itemUrl, itemImg, itemDesc, itemCost, itemOwned } = this.props;
 
         if(itemOwned){
             return (
