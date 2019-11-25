@@ -1,3 +1,43 @@
 .owned{
     color: grey;
 }
+.item{
+    margin:0;
+    padding:0;
+    border: 3px solid white;
+    border-radius: 25px;
+    width: 75%;
+    height:auto;
+    display:flex;
+    padding:10px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-shadow: 10px 10px 5px rgba(31, 31, 31, 0.756);
+
+  }
+  .imageContainer{
+    width:50%;
+  }
+  .desc{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    align-content: space-around;
+    padding: 15px;
+  }
+  .cost{
+    color: red;
+  }
+  .imgPreview{
+    border-radius: 25px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .ownedBox{
+    margin-top: 10px;
+  }
+  #title{
+      color: white;
+      font-size: 2rem;
+  }

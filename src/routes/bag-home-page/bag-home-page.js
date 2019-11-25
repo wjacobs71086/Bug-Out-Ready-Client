@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import './bag-home-page';
+import './bag-home-page.css';
+import BagLogo from '../../bags_bag_handbag_accessory_accessories-19-512.png';
 import ItemsListContext from '../../context/items-context';
 import BagsApiService from '../../Services/bags-api-service';
 import Item from '../../items/item';
@@ -30,6 +31,7 @@ export class BagHomePage extends Component {
       <div className='Heading_links'>
         <Link
           onClick={this.handleLogoutClick}
+          className='Heading_links'
           to='/login'>
           Logout
             </Link>
@@ -41,6 +43,7 @@ export class BagHomePage extends Component {
     return (
       <div className='Heading_links'>
         <Link
+        className='Heading_links'
           to='/bags'>
           Switch Bag
             </Link>
@@ -76,7 +79,6 @@ export class BagHomePage extends Component {
 
   renderBagItems() {
     const { bagsList = [] } = this.context;
-    console.log('this is the context', this.context);
     return bagsList.map(item => <Item
       key={Math.random()}
       itemId={item.item_id}
@@ -93,7 +95,6 @@ export class BagHomePage extends Component {
 
   renderCostRemainingItems() {
     const { itemsList = [] } = this.context;
-    console.log('this is the itemsList in the render cost function', itemsList);
     let remainingCost = itemsList.reduce(function (cnt, o) {
       if (o.owned) {
         return cnt + 0;
@@ -109,11 +110,13 @@ export class BagHomePage extends Component {
   render() {
     return (
       <div>
-        {this.renderCostRemainingItems()}
         {this.renderLogoutLink()}
         {this.renderSwitchBagLink()}
-        <img className="logo" src="../bags_bag_handbag_accessory_accessories-19-512.png" alt="bag" />
-        {this.renderBagItems()}
+        <img className="logo" src={BagLogo} alt="bag" />
+         {this.renderCostRemainingItems()}
+         <div className="itemsList">
+           {this.renderBagItems()}
+         </div>
       </div>
     )
   }

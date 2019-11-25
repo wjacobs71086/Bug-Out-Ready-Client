@@ -7,40 +7,42 @@ export class item extends Component {
     static contextType = ItemsListContext;
 
     render() {
-        
+
         const { itemName, itemUrl, itemImg, itemDesc, itemCost, itemOwned } = this.props;
 
-        if(itemOwned){
+        if (itemOwned) {
             return (
-            <div className='owned'>
-                <h5>I  OWN THIS</h5>
+                <div className='owned'>
                     <p>{itemName}</p>
                     <label>Owned</label>
-                        <input
-                            type="checkbox"
-                            name={this.props.itemId}
-                            checked={itemOwned}
-                            value={itemOwned}
-                            onChange={this.props.handleUpdate}
-                        />
+                    <input
+                        type="checkbox"
+                        name={this.props.itemId}
+                        checked={itemOwned}
+                        value={itemOwned}
+                        onChange={this.props.handleUpdate}
+                    />
 
-            </div>
-        )} else {
+                </div>
+            )
+        } else {
             return (
-                <div>
-                    <h5>{itemName}</h5>
-                        <p>{itemUrl}</p>
-                        <p>{itemImg}</p>
-                        <p>{itemDesc}</p>
-                        <p>{itemCost}</p>
-                        <p>{itemOwned}</p>
-                        <label>Owned</label>
-                        <input
-                            type="checkbox"
-                            name={this.props.itemId}
-                            value={itemOwned}
-                            onChange={this.props.handleUpdate}
-                        />
+                <div className='item'>
+                    <div className="desc">
+                        <a className="itemName" id="title" href={itemUrl} rel="noopener" target="_blank">{itemName}</a>
+                        <p>Description: {itemDesc}<span className="cost"> Estimated Cost: ${itemCost}</span></p>
+                        <label>Owned: <input
+                        type="checkbox"
+                        name={this.props.itemId}
+                        value={itemOwned}
+                        onChange={this.props.handleUpdate}
+                            /></label>
+                    </div>
+                    <div className="ImageContainer">
+                        <img src={itemImg} alt="Item" className="imgPreview" />
+                    </div>
+                    
+
                 </div>
             )
         }

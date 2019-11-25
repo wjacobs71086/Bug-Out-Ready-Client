@@ -29,3 +29,11 @@ body{
     width: 5%;
     height: auto;
 }
+.Heading_links{
+    border: 2ps solid red;
+}
+.itemsList, div{
+    padding:0;
+    margin:0;
+    align-content: center;
+}
