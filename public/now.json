@@ -1,0 +1,15 @@
+{
+    "version":2,
+    "alias": "wjacobs710-bug-out-ready",
+    "name": "Bug Out Ready",
+    "routes": [
+        {
+            "src": "^/static/(.*)",
+            "dest": "/static/$1"
+        },
+        {
+            "src": ".*",
+            "dest":"/index.html"
+        }
+    ]
+}

@@ -23,26 +23,6 @@ export default class NewBagForm extends Component {
     situations.value= ''
   }
 
-  // renderInputs() {
-  //   console.log(this.props);
-  //     const situations = ['Quake','Flood', 'Fire', 'any'];
-  //     return situations.map(sit => 
-  //       <div className='situation' key={Math.random()}>
-  //       <label htmlFor='NewBagForm__situation'>
-  //         {sit}
-  //       </label>
-  //       <Input
-  //         required
-  //         key={Math.random()}
-  //         name={'situations'}
-  //         type='radio'
-  //         value={sit}
-  //         id={`NewBagForm__${sit}`}>
-  //       </Input>
-  //     </div>
-  //       )
-  // }
-
   render() {
     const { error } = this.state
     return (
@@ -65,7 +45,7 @@ export default class NewBagForm extends Component {
         </div>
 
         <select required name="situations">
-          <option value="any">All Purpose</option>
+          <option value="Everything">Everything</option>
           <option value="Quake">Earthquake</option>
           <option value="Fire">Wild Fire</option>
           <option value="Flood">Flash Flood</option>

@@ -12,7 +12,6 @@ export class BagHomePage extends Component {
   static contextType = ItemsListContext;
 
   componentDidMount() {
-
     this.context.clearError();
     BagsApiService.getBagsItems(this.props.match.params.bag_id)
       .then(res => {
@@ -20,7 +19,6 @@ export class BagHomePage extends Component {
         this.context.setBagsList(res)
       })
       .catch(this.context.setError)
-
   }
 
   handleLogoutClick = () => {
@@ -58,7 +56,6 @@ export class BagHomePage extends Component {
     itemOwnedStatus = (itemOwnedStatus === "true");
     let changedOwnedStatus = !itemOwnedStatus;
     const item_id = ev.target.name;
-
     BagsApiService.updateBagItem(bag_id, item_id, changedOwnedStatus)
       .then(response => {
         if (response) {
@@ -79,6 +76,7 @@ export class BagHomePage extends Component {
 
   renderBagItems() {
     const { bagsList = [] } = this.context;
+    console.log('this is the context', this.context);
     return bagsList.map(item => <Item
       key={Math.random()}
       itemId={item.item_id}
@@ -95,6 +93,7 @@ export class BagHomePage extends Component {
 
   renderCostRemainingItems() {
     const { itemsList = [] } = this.context;
+    console.log('this is the itemsList in the render cost function', itemsList);
     let remainingCost = itemsList.reduce(function (cnt, o) {
       if (o.owned) {
         return cnt + 0;
@@ -115,7 +114,6 @@ export class BagHomePage extends Component {
         {this.renderSwitchBagLink()}
         <img className="logo" src="../bags_bag_handbag_accessory_accessories-19-512.png" alt="bag" />
         {this.renderBagItems()}
-        {/* {this.renderUpdatingItems()} */}
       </div>
     )
   }
