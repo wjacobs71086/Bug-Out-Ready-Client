@@ -26,18 +26,23 @@ export class item extends Component {
         } else {
             return (
                 <div className='item'>
-                    <div className="desc">
-                        <a className="itemName" id="title" href={itemUrl} rel="noopener" target="_blank">{itemName}</a>
-                        <p>Description: {itemDesc}<span className="cost"> Estimated Cost: ${itemCost}</span></p>
-                        <label>Own: <input
-                        type="checkbox"
-                        name={this.props.itemId}
-                        value={itemOwned}
-                        onChange={this.props.handleUpdate}
-                            /></label>
-                    </div>
                     <div className="ImageContainer">
-                        <img src={itemImg} alt="Item" className="imgPreview" />
+                        <img src={itemImg} alt="Item" id="img" />
+                    </div>
+
+                    <div className="desc_container">
+                        <a className="itemName" id="title" href={itemUrl} rel="noopener" target="_blank">{itemName}</a>
+                        <p className='desc'>Description: {itemDesc}</p>
+                    </div>
+
+                    <div className='info'>
+                        <p className='cost'>Estimated Cost: ${itemCost}</p>
+                        <label>Own: <input
+                            type="checkbox"
+                            name={this.props.itemId}
+                            value={itemOwned}
+                            onChange={this.props.handleUpdate}
+                            /></label>
                     </div>
                 </div>
             )
