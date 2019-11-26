@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div>
+  <img
+    alt=""
+    className="logo"
+    src="bags_bag_handbag_accessory_accessories-19-512.png"
+  />
+  <form
+    className="LoginForm"
+    onSubmit={[Function]}
+  >
+    <div
+      role="alert"
+    />
+    <div
+      className="user_name"
+    >
+      <label
+        className="LoginForm__user_name"
+        htmlFor="LoginForm__user_name"
+      >
+        User name
+      </label>
+      <input
+        className="Input "
+        id="LoginForm__user_name"
+        name="user_name"
+        placeholder="ready"
+        required={true}
+      />
+    </div>
+    <div
+      className="password"
+    >
+      <label
+        className="password"
+        htmlFor="password"
+      >
+        Password
+      </label>
+      <input
+        className="Input "
+        id="password"
+        name="password"
+        placeholder="go"
+        required={true}
+        type="password"
+      />
+    </div>
+    <button
+      className="Button login"
+      type="submit"
+    >
+      Login
+    </button>
+  </form>
+  <h4
+    className="signUpTitle"
+  >
+    Don't have an account yet?
+  </h4>
+  <a
+    className="signUpLink"
+    href="/sign-up"
+    onClick={[Function]}
+  >
+    Sign-Up
+  </a>
+  <h6>
+    Try it out first, UserName: ready Password: go
+  </h6>
+</div>
+`;

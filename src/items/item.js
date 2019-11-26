@@ -8,6 +8,7 @@ export class item extends Component {
 
     render() {
 
+        console.debug('seeing if this shows up in the test');
         const { itemName, itemUrl, itemImg, itemDesc, itemCost, itemOwned } = this.props;
 
         if (itemOwned) {
@@ -41,8 +42,6 @@ export class item extends Component {
                     <div className="ImageContainer">
                         <img src={itemImg} alt="Item" className="imgPreview" />
                     </div>
-                    
-
                 </div>
             )
         }

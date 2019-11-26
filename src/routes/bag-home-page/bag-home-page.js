@@ -61,7 +61,6 @@ export class BagHomePage extends Component {
     BagsApiService.updateBagItem(bag_id, item_id, changedOwnedStatus)
       .then(response => {
         if (response) {
-          console.log(response);
           BagsApiService.getBagsItems(this.props.match.params.bag_id)
             .then(res => {
               this.context.setItemsList(res)

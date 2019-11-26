@@ -12,8 +12,6 @@ export default class NewBagForm extends Component {
   handleSubmit = ev => {
     ev.preventDefault()
     const { bag_name, situations } = ev.target;
-    console.log(bag_name.value, situations.value);
-
     BagsApiService.createNewBag({
         bag_name: bag_name.value,
         situations: situations.value

@@ -39,7 +39,6 @@ const BagsApiService = {
       )
   },
   createNewBag(bag_name, situations) {
-    console.log(bag_name);
     return fetch(`${config.API_ENDPOINT}/situations`, {
       method: 'POST',
       headers: {

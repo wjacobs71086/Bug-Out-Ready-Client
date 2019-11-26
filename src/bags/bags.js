@@ -12,7 +12,6 @@ export class Bag extends Component {
 
     handleDeleteBag=(id) => {
         const bag_id = id.target.value;
-        console.log('this is the bag_id to delete',  bag_id);
         BagsApiService.deleteBag(bag_id)
         .then(response => {
             BagsApiService.getThings()

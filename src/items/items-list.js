@@ -18,7 +18,6 @@ export class ItemsList extends Component {
 
   renderItems() {
     const { itemsList = [] } = this.context;
-    console.log(itemsList);
     return itemsList.map(item =>
       console.log(item)
     )

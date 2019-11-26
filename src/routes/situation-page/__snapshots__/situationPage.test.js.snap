@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div>
+  <img
+    alt="bag"
+    className="logo"
+    src="bags_bag_handbag_accessory_accessories-19-512.png"
+  />
+  <h3>
+    What type of event are you wanting to prepare for?
+  </h3>
+  <form
+    className="NewBagForm"
+    onSubmit={[Function]}
+  >
+    <div
+      role="alert"
+    />
+    <div
+      className="bag_name"
+    >
+      <label
+        htmlFor="NewBagForm__bag_name"
+      >
+        Bag name
+      </label>
+      <input
+        className="Input "
+        id="NewBagForm__bag_name"
+        name="bag_name"
+        required={true}
+      />
+    </div>
+    <select
+      name="situations"
+      required={true}
+    >
+      <option
+        value="Everything"
+      >
+        Everything
+      </option>
+      <option
+        value="Quake"
+      >
+        Earthquake
+      </option>
+      <option
+        value="Fire"
+      >
+        Wild Fire
+      </option>
+      <option
+        value="Flood"
+      >
+        Flash Flood
+      </option>
+    </select>
+    <button
+      className="Button "
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+`;

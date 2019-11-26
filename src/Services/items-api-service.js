@@ -3,7 +3,6 @@ import TokenService from './token-service';
 
 const ItemsApiService = {
   getThings() {
-    //console.log('getThings is being called')
     return fetch(`${config.API_ENDPOINT}/items`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`,

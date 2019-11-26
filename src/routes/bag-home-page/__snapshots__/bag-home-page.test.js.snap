@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div>
+  <div
+    className="headerLinks"
+  >
+    <div
+      className="logoutLink"
+    >
+      <a
+        href="/login"
+        id="logoutLink"
+        onClick={[Function]}
+      >
+        Logout
+      </a>
+    </div>
+    <div
+      className="switchBagLink"
+    >
+      <a
+        href="/bags"
+        id="switchBagLink"
+        onClick={[Function]}
+      >
+        Switch Bags
+      </a>
+    </div>
+  </div>
+  <img
+    alt="bag"
+    className="logo"
+    src="bags_bag_handbag_accessory_accessories-19-512.png"
+  />
+  <h4>
+     Estimated Cost for remaining items $
+    0
+  </h4>
+  <div
+    className="itemsList"
+  />
+</div>
+`;

@@ -2,7 +2,6 @@ import config from '../config';
 
 const AuthService = {
     postLogin(credentials) {
-        console.log('making the credentials post call');
         return fetch(`${config.API_ENDPOINT}/api/auth/login`, {
             method: `POST`,
             headers: {
@@ -17,7 +16,6 @@ const AuthService = {
         );
     },
     createUserCall(user){
-        console.log(user);
         return fetch(`${config.API_ENDPOINT}/api/auth/sign-up`, {
             method:'POST',
             headers: {

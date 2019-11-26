@@ -11,7 +11,6 @@ export class SignupPage extends Component {
       }
     
       handleSignUpSuccess = user => {
-        console.log('handlesign up success is being called');
         AuthService.createUserCall(user);
         const { history } = this.props
         history.push('/login')

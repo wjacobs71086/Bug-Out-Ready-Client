@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div>
+  <div>
+    <img
+      alt=""
+      className="logo"
+      src="bags_bag_handbag_accessory_accessories-19-512.png"
+    />
+    <form
+      className="SignUpForm"
+      onSubmit={[Function]}
+    >
+      <div
+        role="alert"
+      />
+      <div
+        className="user_name"
+      >
+        <label
+          htmlFor="SignUpForm__user_name"
+        >
+          User name 
+          <span
+            className="Required "
+          >
+            *
+          </span>
+        </label>
+        <input
+          className="Input "
+          id="SignUpForm__user_name"
+          name="user_name"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="password"
+      >
+        <label
+          htmlFor="SignUpForm__password"
+        >
+          Password 
+          <span
+            className="Required "
+          >
+            *
+          </span>
+        </label>
+        <input
+          className="Input "
+          id="SignUpForm__password"
+          name="password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <button
+        className="Button registerButton"
+        type="submit"
+      >
+        Register
+      </button>
+    </form>
+  </div>
+</div>
+`;
