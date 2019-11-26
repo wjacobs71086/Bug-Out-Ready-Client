@@ -53,7 +53,7 @@ class App extends Component {
           path={'/login'}
           component={LoginPage}
         />
-        <Route
+        <PrivateRoute
           exact
           path={'/bag-home/:bag_id'}
           component={BagHomePage}

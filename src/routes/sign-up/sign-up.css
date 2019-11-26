@@ -8,13 +8,37 @@ body{
     background-color: #0E273C;
     color: #81C3D7;
 }
-
-.logo{
-    color: red;
-    width: 10%;
-    height: auto;
-    margin-top: 5%;
+.SignUpForm{
+    margin-top:30px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.header{
-    font-size: 3rem;
+
+#SignUpForm__password{
+    color: red;
+    margin: 5%;
+    width: 29%;
+}
+
+
+#SignUpForm__user_name{
+    width: 30%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.user_name{
+    width: 150%;
+}
+.password{
+    width:150%;
+}
+.registerButton{
+    margin-top: 5%;
+    width: 40%;
+    font-size: 1rem;
+    border-radius: 25px;
 }

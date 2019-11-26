@@ -1,11 +1,17 @@
+/* font-family: 'Anton', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Teko', sans-serif;
+font-family: 'Archivo Black', sans-serif;
+font-family: 'Fugaz One', cursive;
+font-family: 'Staatliches', cursive; */
+
 .App {
   text-align: center;
 }
-
 .App-logo {
   height: 100%;
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -16,7 +22,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #09d3ac;
 }
@@ -24,9 +29,19 @@
 a{
   text-decoration: none;
 }
-
 a:visited {
   color:white;
-  border: 1px solid red;
+}
+
+.logo{
+  width: 30%;
+  height: auto;
+  margin-top: 5%;
+}
+.header{
+  font-size: 5rem;
+  color: #D9DCD6;
+  font-family: 'Bebas Neue', cursive;
+ 
 }
 

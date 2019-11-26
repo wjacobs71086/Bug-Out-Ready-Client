@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import BagsApiService from '../Services/bags-api-service';
-import trashIcon from '../trash_icon.psd';
+import trashIcon from '../trash_icon.png';
 import ItemsListContext from '../context/items-context'; 
 
 export class Bag extends Component {
@@ -24,18 +24,17 @@ export class Bag extends Component {
     render() {
         const { bagName, bagId } = this.props;
         return (
-            <div>
+            <div className='bag'>
                 <Link
                     to={`/bag-home/${bagId}`}>
-                        <h5>{bagName}</h5>
+                        <h5 className='bagTitle'>{bagName}</h5>
                 </Link>
                 <button
                     className="deleteButton"
                     value={bagId}
                     onClick={this.handleDeleteBag}
-                    > Delete Bag
+                    >Delete <br></br>{bagName}
                 </button>
-            
             </div>
         )
     }

@@ -10,13 +10,9 @@ body{
 }
 
 .logo{
-    color: red;
-    width: 10%;
+    width: 30%;
     height: auto;
     margin-top: 5%;
-}
-.header{
-    color: #D9DCD6;
 }
 .selection{
     margin: 1%;

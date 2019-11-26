@@ -7,20 +7,57 @@ body{
     margin-right: 5%;
     background-color: #0E273C;
     color: #81C3D7;
+    font-size: 2rem;
 }
 
-.logo{
-    color: red;
-    width: 10%;
-    height: auto;
-    margin-top: 5%;
-}
-.header{
-    font-size: 3rem;
-}
 .LoginForm{
     margin-top:30px;
     font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.signUpLink{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.signUpTitle{
+    margin-bottom: 2%;
+}
+.signUpLink:hover{
+    Color:#09d3ac;
+    border: transparent;
+    border-radius: 25px;
+}
+.red{
+    color: red;
+}
+
+#LoginForm_password{
+    color: red;
+    margin: 5%;
+}
+#password{
+    width: 30%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#LoginForm__user_name{
+    width: 30%;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 .user_name{
+    width: 150%;
+}
+.password{
+    width:150%;
+}
+.login{
+    margin-top: 5%;
+    width: 25%;
+    font-size: 1rem;
+    border-radius: 25px;
 }

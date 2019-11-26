@@ -5,7 +5,7 @@ import AuthApiService from '../Services/auth-api-service';
 
 export default class LoginForm extends Component {
   static defaultProps = {
-    onLoginSuccess: () => {}
+    onLoginSuccess: () => { }
   }
 
   state = { error: null }
@@ -32,17 +32,17 @@ export default class LoginForm extends Component {
       user_name: user_name.value,
       password: password.value,
     })
-    .then(res => {
-      user_name.value = '';
-      password.value = '';
-      TokenService.saveAuthToken(res.authToken);
-      this.props.onLoginSuccess();
-    })
-    .catch(res => {
-      this.setState({
-        error: res.error
+      .then(res => {
+        user_name.value = '';
+        password.value = '';
+        TokenService.saveAuthToken(res.authToken);
+        this.props.onLoginSuccess();
       })
-    })
+      .catch(res => {
+        this.setState({
+          error: res.error
+        })
+      })
   };
 
   render() {
@@ -56,27 +56,37 @@ export default class LoginForm extends Component {
           {error && <p className='red'>{error}</p>}
         </div>
         <div className='user_name'>
-          <label htmlFor='LoginForm__user_name'>
+          <label htmlFor='LoginForm__user_name' className='LoginForm__user_name'>
             User name
           </label>
           <Input
             required
             name='user_name'
+            placeholder='ready'
             id='LoginForm__user_name'>
           </Input>
         </div>
+        
         <div className='password'>
-          <label htmlFor='LoginForm__password'>
+          <label 
+            htmlFor='password' 
+            className='password'>
             Password
           </label>
+
           <Input
             required
             name='password'
+            placeholder='go'
             type='password'
-            id='LoginForm__password'>
+            id='password'>
           </Input>
         </div>
-        <Button type='submit'>
+
+        <Button 
+          type='submit'
+          className='login'
+          >
           Login
         </Button>
       </form>

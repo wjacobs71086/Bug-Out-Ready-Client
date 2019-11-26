@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './LoginPage.css';
 import LoginForm from '../../LoginForm/LoginForm';
 import { Link } from 'react-router-dom';
+import BagLogo from '../../bags_bag_handbag_accessory_accessories-19-512.png';
 
 export class LoginPage extends Component {
     static defaultProps = {
@@ -18,12 +19,14 @@ export class LoginPage extends Component {
     render() {
         return (
             <div>
+              <img className='logo' src={BagLogo} alt=''></img>
         <LoginForm
           onLoginSuccess={this.handleLoginSuccess}
           className="loginForm"
         />
-        <h4>Don't have an account yet?</h4>
+        <h4 className='signUpTitle'>Don't have an account yet?</h4>
         <Link
+            className='signUpLink'
             to='/sign-up'
         >Sign-Up</Link>
         <h6>Try it out first, UserName: ready Password: go</h6>

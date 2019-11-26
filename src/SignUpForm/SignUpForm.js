@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Input, Required } from '../Utils/Utils';
 import './SignUpForm.css';
-
+import BagLogo from '../bags_bag_handbag_accessory_accessories-19-512.png';
 export default class SignUpForm extends Component {
   static defaultProps = {
     onSignUpSuccess: () => {}
@@ -23,6 +23,8 @@ export default class SignUpForm extends Component {
   render() {
     const { error } = this.state
     return (
+      <div>
+      <img className='logo' src={BagLogo} alt=''></img>
       <form
         className='SignUpForm'
         onSubmit={this.handleSubmit}
@@ -52,10 +54,13 @@ export default class SignUpForm extends Component {
             id='SignUpForm__password'>
           </Input>
         </div>
-        <Button type='submit'>
+        <Button 
+          className='registerButton'
+          type='submit'>
           Register
         </Button>
       </form>
+      </div>
     )
   }
 }

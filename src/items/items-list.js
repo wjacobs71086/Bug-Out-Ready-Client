@@ -21,15 +21,6 @@ export class ItemsList extends Component {
     console.log(itemsList);
     return itemsList.map(item =>
       console.log(item)
-      // <Item
-      //   key={item.id}
-      //   itemName={item.item_name}
-      //   itemUrl={item.url}
-      //   itemImg={item.img}
-      //   itemDesc={item.description}
-      //   itemCost={item.est_cost}
-      //   itemOwned={item.owned}
-      // />
     )
   }
 
