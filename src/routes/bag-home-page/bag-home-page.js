@@ -4,10 +4,9 @@ import BagLogo from '../../bags_bag_handbag_accessory_accessories-19-512.png';
 import ItemsListContext from '../../context/items-context';
 import BagsApiService from '../../Services/bags-api-service';
 import Item from '../../items/item';
-//import ItemsApiService from '../../Services/items-api-service';
 import TokenService from '../../Services/token-service';
 import { Link } from 'react-router-dom';
-//import { thisExpression, isTSAnyKeyword } from '@babel/types';
+
 
 export class BagHomePage extends Component {
   static contextType = ItemsListContext;
@@ -28,12 +27,12 @@ export class BagHomePage extends Component {
 
   renderLogoutLink() {
     return (
-      <div>
+      <div className='logoutLink'>
         <Link
           onClick={this.handleLogoutClick}
           id='logoutLink'
           to='/login'>
-           ---Logout---
+           Logout
             </Link>
       </div>
     )
@@ -41,11 +40,11 @@ export class BagHomePage extends Component {
 
   renderSwitchBagLink() {
     return (
-      <div className='Heading_links'>
+      <div className='switchBagLink'>
         <Link
-        id='switchBagLink'
+          id='switchBagLink'
           to='/bags'>
-          ---Switch Bags---
+          Switch Bags
             </Link>
       </div>
     )
@@ -112,7 +111,7 @@ export class BagHomePage extends Component {
       <div>
         <div className="headerLinks">
           {this.renderLogoutLink()}
-        {this.renderSwitchBagLink()}
+          {this.renderSwitchBagLink()}
         </div>
         <img className="logo" src={BagLogo} alt="bag" />
          {this.renderCostRemainingItems()}
