@@ -28,12 +28,12 @@ export class BagHomePage extends Component {
 
   renderLogoutLink() {
     return (
-      <div className='Heading_links'>
+      <div>
         <Link
           onClick={this.handleLogoutClick}
-          className='Heading_links'
+          id='logoutLink'
           to='/login'>
-          Logout
+           ---Logout---
             </Link>
       </div>
     )
@@ -43,9 +43,9 @@ export class BagHomePage extends Component {
     return (
       <div className='Heading_links'>
         <Link
-        className='Heading_links'
+        id='switchBagLink'
           to='/bags'>
-          Switch Bag
+          ---Switch Bags---
             </Link>
       </div>
     )
@@ -110,8 +110,10 @@ export class BagHomePage extends Component {
   render() {
     return (
       <div>
-        {this.renderLogoutLink()}
+        <div className="headerLinks">
+          {this.renderLogoutLink()}
         {this.renderSwitchBagLink()}
+        </div>
         <img className="logo" src={BagLogo} alt="bag" />
          {this.renderCostRemainingItems()}
          <div className="itemsList">

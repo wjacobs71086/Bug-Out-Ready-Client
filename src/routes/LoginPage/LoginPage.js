@@ -20,6 +20,7 @@ export class LoginPage extends Component {
             <div>
         <LoginForm
           onLoginSuccess={this.handleLoginSuccess}
+          className="loginForm"
         />
         <h4>Don't have an account yet?</h4>
         <Link

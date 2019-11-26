@@ -18,3 +18,9 @@ body{
 .header{
     font-size: 3rem;
 }
+.LoginForm{
+    margin-top:30px;
+    font-size: 2rem;
+}
+.user_name{
+}

@@ -11,7 +11,7 @@ body{
 
 .logo{
     color: red;
-    width: 10%;
+    width: 100%;
     height: auto;
     margin-top: 5%;
 }
@@ -22,17 +22,25 @@ body{
     margin: 1%;
 }
 
-.signout{
-    margin-top: 2%;
-}
 .icon{
     width: 5%;
     height: auto;
 }
-.Heading_links{
-    border: 2ps solid red;
+.headerLinks{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
-.itemsList, div{
+
+#logoutLink{
+    margin: 10px;
+    width: 100px;
+    border-radius: 25px;
+}
+#switchBagLink{
+    margin: 10px;
+}
+.itemsList{
     padding:0;
     margin:0;
     align-content: center;

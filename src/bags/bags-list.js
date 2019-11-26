@@ -3,8 +3,8 @@ import Bag from './bags';
 import { Link } from 'react-router-dom';
 import ItemsListContext from '../context/items-context';
 import BagsApiService from '../Services/bags-api-service';
-
-
+import BagLogo from '../bags_bag_handbag_accessory_accessories-19-512.png';
+import './bags-list.css';
 
 export class BagsList extends Component {
     static contextType = ItemsListContext;
@@ -32,7 +32,7 @@ export class BagsList extends Component {
     render() {
         return (
             <div>
-              <img className="logo" src="../bags_bag_handbag_accessory_accessories-19-512.png" alt="bag" />
+              <img className="logo" src={BagLogo} alt="" />
                 <h3 className="header">My Bags</h3>
                 {this.renderBags()}
                 <Link

@@ -10,6 +10,8 @@ import SignupPage from './routes/sign-up/sign-up';
 import BagHomePage from './routes/bag-home-page/bag-home-page';
 import LoginPage from '../src/routes/LoginPage/LoginPage';
 //import PageNotFound from './routes/404-page/page-not-found';
+import PrivateRoute from './Utils/PrivateRoute';
+import PublicRoute from './Utils/PublicRoute'
 
 class App extends Component {
   render(){
@@ -26,7 +28,7 @@ class App extends Component {
           path={'/items'}
           component={itemListPage}
         />
-        <Route
+        <PrivateRoute
           exact
           path={'/bags'}
           component={bagsListPage}
@@ -46,7 +48,7 @@ class App extends Component {
           path={'/sign-up'}
           component={SignupPage}
         />
-        <Route
+        <PublicRoute
           exact
           path={'/login'}
           component={LoginPage}

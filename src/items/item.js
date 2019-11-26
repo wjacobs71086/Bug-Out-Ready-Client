@@ -31,7 +31,7 @@ export class item extends Component {
                     <div className="desc">
                         <a className="itemName" id="title" href={itemUrl} rel="noopener" target="_blank">{itemName}</a>
                         <p>Description: {itemDesc}<span className="cost"> Estimated Cost: ${itemCost}</span></p>
-                        <label>Owned: <input
+                        <label>Own: <input
                         type="checkbox"
                         name={this.props.itemId}
                         value={itemOwned}

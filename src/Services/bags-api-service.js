@@ -55,8 +55,6 @@ const BagsApiService = {
       .then(res => res.bag_id);
   },
   deleteBag(bag_id){
-    console.log('this is the id to delete',bag_id, 'and the type of', typeof bag_id);
-
     return fetch(`${config.API_ENDPOINT}/bags/${bag_id}`, {
       method: 'DELETE',
       headers: {
@@ -64,12 +62,15 @@ const BagsApiService = {
         'authorization': `bearer ${TokenService.getAuthToken()}`
       },
       body: JSON.stringify({id: bag_id})
-    }).then(res =>
-        (!res.ok)
-        ? res.json().then(e => Promise.reject(e))
-        : res.ok
-      )
+    })
+    .then(res =>
+      (!res.ok)
+      ? res.json().then(e => Promise.reject(e))
+      : res.ok
+    )
   },
+
+
   updateBagItem(bag_id, item_id, owned){
     return fetch(`${config.API_ENDPOINT}/bag-home/${bag_id}`, {
       method: 'PATCH',
