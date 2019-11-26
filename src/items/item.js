@@ -7,10 +7,7 @@ export class item extends Component {
     static contextType = ItemsListContext;
 
     render() {
-
-        console.debug('seeing if this shows up in the test');
         const { itemName, itemUrl, itemImg, itemDesc, itemCost, itemOwned } = this.props;
-
         if (itemOwned) {
             return (
                 <div className='owned'>

@@ -1,5 +1,8 @@
 .owned{
     color: grey;
+    border: 3px solid white;
+    border-radius: 25px;
+    margin: 5% auto;
 }
 .item{
     margin:0 auto;

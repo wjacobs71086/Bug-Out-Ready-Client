@@ -72,9 +72,6 @@ export class BagHomePage extends Component {
         }
       });
   }
-
-
-
   renderBagItems() {
     const { bagsList = [] } = this.context;
     return bagsList.map(item => <Item
