@@ -11,6 +11,9 @@ You have the option to have multiple bags incase you would like to have one for 
 
 ## ScreenShots
 ![SplashPage](./SplashPage_img.png)
+![Bags-list](./bags-list_img.png)
+![Situations-route](situations-route_img.png)
+![item-list](./item-list_img.png)
 
 
 ## Disclaimer
