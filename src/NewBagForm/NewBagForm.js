@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Input } from '../Utils/Utils';
 import BagsApiService from '../Services/bags-api-service';
+import { Link } from 'react-router-dom';
 
 export default class NewBagForm extends Component {
   static defaultProps = {
@@ -24,6 +25,7 @@ export default class NewBagForm extends Component {
   render() {
     const { error } = this.state
     return (
+      <div>
       <form
         className='NewBagForm'
         onSubmit={this.handleSubmit}
@@ -42,17 +44,27 @@ export default class NewBagForm extends Component {
           </Input>
         </div>
 
-        <select required name="situations">
+        <select required name="situations" className='selector'>
           <option value="Everything">Everything</option>
           <option value="Quake">Earthquake</option>
           <option value="Fire">Wild Fire</option>
           <option value="Flood">Flash Flood</option>
         </select>
-
-        <Button type='submit'>
+        <div className='buttons'>
+        <Button type='submit' className='submit'>
           Submit
         </Button>
+        <Button >
+        <Link
+          id='cancelButton'
+          to='/bags'>
+            Cancel
+            </Link>
+        </Button>
+        </div>
       </form>
+
+</div>
     )
   }
 }
