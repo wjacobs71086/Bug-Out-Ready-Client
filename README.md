@@ -11,7 +11,6 @@ You have the option to have multiple bags incase you would like to have one for 
 
 ## ScreenShots
 ![SplashPage](./SplashPage_img.png)
-Format: ![This is the landing page of Bug Out Ready](url)
 
 
 ## Disclaimer
