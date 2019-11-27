@@ -15,6 +15,16 @@ You have the option to have multiple bags incase you would like to have one for 
 ![Situations-route](situations-route_img.png)
 ![item-list](./item-list_img.png)
 
+## Technical Info and Startup
+This application was built using react,  html, css, jest, vanilla JS, and JWT for the client side tech stack. Express, Postgresql, supertest, mocha, chai, postgrator bcrypt and JWT are used on the  server side to authenticate, handle requests and build the database. 
+
+This app on a base level uses Browser Router to handle URL switches with the routes being contained in the routes folder in src. The other primary components( forms, items, bags, etc..) are stored in the src folder. 
+
+This app is made to demo purposes and is only expected to be used to show knowledge and was not intended to be re-used for other purposes. With that said, as a developer if you see something you would like clarity on or would like to include in a project of your own please message me for information. 
+
+If you would like to try the application locally simply clone the repos, run NPM INSTALL and begin.
+Client Repo: https://github.com/wjacobs71086/Bug-Out-Ready-Client.git
+API Repo: https://github.com/wjacobs71086/Bug-Out-Ready-Server.git
 
 ## Disclaimer
 
