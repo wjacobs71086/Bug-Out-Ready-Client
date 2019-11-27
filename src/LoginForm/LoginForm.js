@@ -8,18 +8,42 @@ export default class LoginForm extends Component {
     onLoginSuccess: () => { }
   }
 
-  state = { error: null }
-
-  handleSubmitBasicAuth = ev => {
-    ev.preventDefault()
-    const { user_name, password } = ev.target
-
-    TokenService.saveAuthToken(TokenService.makeBasicAuthToken(user_name.value, password.value))
-
-    user_name.value = ''
-    password.value = ''
-    this.props.onLoginSuccess()
+  state = { 
+    error: null,
+    user_name: null,
+    password: null,
+    touched: false
   }
+
+  // validatePassword = (input) => {
+  //   const password = input.trim(); 
+  //   if (password.length === 0) { 
+  //     this.setState({
+  //       error: 'Password Field Is Empty'
+  //     })
+  //     console.log('password is empty');
+  //   }
+  //   return password;
+  // }
+
+  // handleChange = (e) => {
+  //   let password = e.target.value;
+  //   var matches = password.match(/\d+/g);
+  //   setTimeout((e) => {
+  //   if (matches !== null) {
+  //     console.log(matches);
+  //     this.setState({ 
+  //     password: password,
+  //     touched: true 
+  //   })
+  //   } else{
+  //     this.setState({
+  //       error: 'Password must contain a number'
+  //     })
+  //   }
+  // }, 3000);
+  // }
+
 
   handleSubmitJwtAuth = ev => {
     ev.preventDefault();
@@ -27,6 +51,7 @@ export default class LoginForm extends Component {
       error: null,
     })
     const { user_name, password } = ev.target;
+    // const validatedPassword = this.validatePassword(password.value);
 
     AuthApiService.postLogin({
       user_name: user_name.value,
@@ -79,6 +104,7 @@ export default class LoginForm extends Component {
             name='password'
             placeholder='go'
             type='password'
+            // onChange={this.handleChange}
             id='password'>
           </Input>
         </div>

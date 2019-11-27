@@ -28,11 +28,11 @@ font-family: 'Staatliches', cursive; */
 
 a{
   text-decoration: none;
+  color:white;
 }
 a:visited {
   color:white;
 }
-
 .logo{
   width: 30%;
   height: auto;
