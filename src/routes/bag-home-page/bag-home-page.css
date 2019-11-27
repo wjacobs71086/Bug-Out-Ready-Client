@@ -46,7 +46,6 @@ body{
     margin-left: 2%;
 }
 .switchBagLink:hover{
-    width: 40%;
     background: rgba(255, 0, 0, 0.561);
     border: transparent;
     border-radius: 25px;
