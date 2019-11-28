@@ -13,6 +13,7 @@ export class LandingPage extends Component {
                 <p>Use this app to help build a bag known as a "bugout" bag to grab in the event of an emergency or natural disaster. This will help set you and your family up for success in a time of need. </p>
                 <div className="startLink">
                     <Link
+                        id='loginButton'
                         to='/login'>
                         Get started
                     </Link>

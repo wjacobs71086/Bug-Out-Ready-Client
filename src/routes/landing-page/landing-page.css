@@ -21,3 +21,6 @@ body{
     font-family: 'Teko', sans-serif;
     font-size: 1.5rem;
 }
+#loginButton:hover{
+    Color:#09d3ac;
+}
