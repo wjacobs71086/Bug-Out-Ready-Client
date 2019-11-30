@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Bug-Out-Ready-Client/static/css/main.1c549fdd.chunk.css",
+    "main.js": "/Bug-Out-Ready-Client/static/js/main.012ad529.chunk.js",
+    "main.js.map": "/Bug-Out-Ready-Client/static/js/main.012ad529.chunk.js.map",
+    "runtime-main.js": "/Bug-Out-Ready-Client/static/js/runtime-main.94714061.js",
+    "runtime-main.js.map": "/Bug-Out-Ready-Client/static/js/runtime-main.94714061.js.map",
+    "static/js/2.41eada2c.chunk.js": "/Bug-Out-Ready-Client/static/js/2.41eada2c.chunk.js",
+    "static/js/2.41eada2c.chunk.js.map": "/Bug-Out-Ready-Client/static/js/2.41eada2c.chunk.js.map",
+    "index.html": "/Bug-Out-Ready-Client/index.html",
+    "precache-manifest.9d64631961e0182e4db6ee2b623bc454.js": "/Bug-Out-Ready-Client/precache-manifest.9d64631961e0182e4db6ee2b623bc454.js",
+    "service-worker.js": "/Bug-Out-Ready-Client/service-worker.js",
+    "static/css/main.1c549fdd.chunk.css.map": "/Bug-Out-Ready-Client/static/css/main.1c549fdd.chunk.css.map",
+    "static/media/bags_bag_handbag_accessory_accessories-19-512.png": "/Bug-Out-Ready-Client/static/media/bags_bag_handbag_accessory_accessories-19-512.c7a5a4c9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.94714061.js",
+    "static/js/2.41eada2c.chunk.js",
+    "static/css/main.1c549fdd.chunk.css",
+    "static/js/main.012ad529.chunk.js"
+  ]
+}
