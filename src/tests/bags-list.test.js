@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import BagHomePage from './bag-home-page';
+import BagsList from '../bags/bags-list';
 import { BrowserRouter } from 'react-router-dom'
-import { ItemsListProvider } from '../../context/items-context';
-import { Route
-} from 'react-router-dom'
+import { ItemsListProvider } from '../context/items-context';
+import { Route } from 'react-router-dom'
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
@@ -13,8 +12,7 @@ it('renders without crashing', () => {
         <BrowserRouter>
             <ItemsListProvider>
                 <Route
-                    to
-                    component={BagHomePage}
+                    component={BagsList}
                 />
             </ItemsListProvider>
         </BrowserRouter>
@@ -28,8 +26,7 @@ it('renders the UI as expected', () => {
       <BrowserRouter>
         <ItemsListProvider>
             <Route
-                to
-                component={BagHomePage}
+                component={BagsList}
             />
         </ItemsListProvider>
     </BrowserRouter>)

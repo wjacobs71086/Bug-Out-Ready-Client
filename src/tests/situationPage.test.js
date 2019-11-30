@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import SignupPage from './sign-up';
+import SituationPage from '../routes/situation-page/situation-page';
 import { BrowserRouter } from 'react-router-dom'
-import { ItemsListProvider } from '../../context/items-context';
+import { ItemsListProvider } from '../context/items-context';
 import { Route } from 'react-router-dom'
 
 it('renders without crashing', () => {
@@ -12,7 +12,7 @@ it('renders without crashing', () => {
         <BrowserRouter>
             <ItemsListProvider>
                 <Route
-                    component={SignupPage}
+                    component={SituationPage}
                 />
             </ItemsListProvider>
         </BrowserRouter>
@@ -26,7 +26,7 @@ it('renders the UI as expected', () => {
       <BrowserRouter>
         <ItemsListProvider>
             <Route
-                component={SignupPage}
+                component={SituationPage}
             />
         </ItemsListProvider>
     </BrowserRouter>)
