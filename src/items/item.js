@@ -20,7 +20,6 @@ export class item extends Component {
                         value={itemOwned}
                         onChange={this.props.handleUpdate}
                     />
-
                 </div>
             )
         } else {
@@ -37,12 +36,17 @@ export class item extends Component {
 
                     <div className='info'>
                         <p className='cost'>Estimated Cost: ${itemCost}</p>
-                        <label>Own: <input
+                        <label
+                            className='owned_box'
+                        >Own: 
+                            </label>
+                            <input
                             type="checkbox"
+                            className='checkbox'
                             name={this.props.itemId}
                             value={itemOwned}
                             onChange={this.props.handleUpdate}
-                            /></label>
+                        />
                     </div>
                 </div>
             )

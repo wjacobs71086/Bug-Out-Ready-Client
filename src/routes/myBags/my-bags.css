@@ -1,13 +1,3 @@
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    margin-left: 5%;
-    margin-right: 5%;
-    background-color: #0E273C;
-    color: #81C3D7;
-}
 
 .logo{
     width: 30%;

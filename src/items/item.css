@@ -1,61 +1,66 @@
 .owned{
-    color: grey;
-    border: 3px solid white;
-    border-radius: 25px;
-    margin: 5% auto;
+  color: grey;
+  border: 3px solid white;
+  border-radius: 25px;
+  margin: 5% auto;
 }
 .itemsList{
+  width:100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  padding: 0;
 }
 .item{
-    margin:0 auto;
-    width: 50%;
-    border: 3px solid white;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    padding: 5%;
-    margin: 5%;
-    box-shadow: 10px 10px 5px rgba(31, 31, 31, 0.756);
-  }
-  .ImageContainer{
-    display: flex;
-    justify-content: center;
-    margin-bottom:0;
-  }
-  .desc_container{
-    flex-grow:1;
-  }
-  .cost{
-    color: red;
-    margin:0;
-  }
-  #img{
-    border-radius: 25px;
-    width: 75%;
-    max-width: 400px;
-    margin-top: 2%;
-    height: auto;
-    object-fit: cover;
-  }
-  .ownedBox{
-    margin-top: 10px;
-  }
-  #title{
-      color: white;
-      font-size: 3rem;
-      margin-bottom: 0;
-      margin-top: 0;
-  }
-  .info{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .desc{
-    margin-top: 2%;
-  }
+  width: 20%;
+  height: 20%;
+  margin: 2%;
+  padding: 2%;
+  border-radius: 25px;
+  border: 3px solid white;
+}
+.ImageContainer{
+  width: 100%;
+}
+.desc_container{
+  width: 100%;
+  padding: auto 2%;
+  display: flex;
+  flex-direction: column;
+}
+.cost{
+  color: red;
+}
+
+#img{
+  width:100%;
+  position:relative;
+  background: url() 50% 50% no-repeat;
+  background-size:cover;
+  background-clip:content-box;
+  border-radius: 25px;
+}
+#img:before{
+  display:block;
+  content:"";
+  padding-top:75%;
+}
+#title{
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.desc{
+  margin-top: 2%;
+}
+.owned_box{
+}
+.checkbox{
+  transform: scale(1.5);
+}

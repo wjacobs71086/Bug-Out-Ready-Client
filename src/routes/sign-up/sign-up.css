@@ -1,13 +1,4 @@
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    margin-left: 5%;
-    margin-right: 5%;
-    background-color: #0E273C;
-    color: #81C3D7;
-}
+
 .SignUpForm{
     margin-top:30px;
     font-size: 2rem;
