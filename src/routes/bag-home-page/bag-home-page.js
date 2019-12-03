@@ -118,7 +118,7 @@ export class BagHomePage extends Component {
       }
     }, 0);
     return (
-      <h4> Estimated Cost for remaining items ${remainingCost}</h4>
+      <h3> Estimated Cost for remaining items <span className='cost'>${remainingCost}</span></h3>
     )
   }
 
@@ -130,7 +130,9 @@ export class BagHomePage extends Component {
           {this.renderSwitchBagLink()}
         </div>
          {this.renderCostRemainingItems()}
-         <button onClick={this.handleOwnedSwitch}> {this.state.ownedView ? 'UnOwned Items' : 'Owned Items'} </button>
+         <button 
+         className='ownedButton'
+         onClick={this.handleOwnedSwitch}> {this.state.ownedView ? 'View Unowned Items' : 'View Owned Items'} </button>
          <div className="itemsList">
            {this.renderBagItems()}
          </div>

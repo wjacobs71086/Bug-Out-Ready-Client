@@ -28,9 +28,12 @@ export class item extends Component {
 
                     <div className='info'>
                         <p className='cost'>Estimated Cost: ${itemCost}</p>
-                        <label>Owned</label>
+                        <label
+                        className='owned_box'
+                        >Owned</label>
                         <input
                             type="checkbox"
+                            className='checkbox'
                             name={this.props.itemId}
                             checked={itemOwned}
                             value={itemOwned}
@@ -64,7 +67,7 @@ export class item extends Component {
                 </div>
 
                 <div className='info'>
-                    <p className='cost'>Estimated Cost: ${itemCost}</p>
+                    <p>Estimated Cost:  <span className='cost'>${itemCost}</span></p>
                     <label
                         className='owned_box'
                     >Own:

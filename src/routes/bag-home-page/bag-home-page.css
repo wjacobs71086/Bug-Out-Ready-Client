@@ -39,3 +39,16 @@
     border: transparent;
     border-radius: 25px;
 }
+.ownedButton{
+    font-family: 'Teko', sans-serif;
+    background: transparent;
+    color: white;
+    border: transparent;
+    font-size: 2rem;
+}
+
+.ownedButton:hover{
+    Color:#09d3ac;
+    border: transparent;
+    border-radius: 25px;
+}
