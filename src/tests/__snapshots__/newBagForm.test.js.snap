@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div>
+  <form
+    className="NewBagForm"
+    onSubmit={[Function]}
+  >
+    <div
+      role="alert"
+    />
+    <div
+      className="bag_name"
+    >
+      <label
+        htmlFor="NewBagForm__bag_name"
+      >
+        Bag name
+      </label>
+      <input
+        className="Input "
+        id="NewBagForm__bag_name"
+        name="bag_name"
+        required={true}
+      />
+    </div>
+    <select
+      className="selector"
+      name="situations"
+      required={true}
+    >
+      <option
+        value="Everything"
+      >
+        Everything
+      </option>
+      <option
+        value="Quake"
+      >
+        Earthquake
+      </option>
+      <option
+        value="Fire"
+      >
+        Wild Fire
+      </option>
+      <option
+        value="Flood"
+      >
+        Flash Flood
+      </option>
+    </select>
+    <div
+      className="buttons"
+    >
+      <button
+        className="Button submit"
+        type="submit"
+      >
+        Submit
+      </button>
+      <button
+        className="Button "
+      >
+        <a
+          href="/bags"
+          id="cancelButton"
+          onClick={[Function]}
+        >
+          Cancel
+        </a>
+      </button>
+    </div>
+  </form>
+</div>
+`;

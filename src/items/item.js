@@ -8,7 +8,10 @@ export class item extends Component {
     static contextType = ItemsListContext;
 
     render() {
-        const { itemName, itemUrl, itemImg, itemDesc, itemCost, itemOwned, ownedView } = this.props;
+        let { itemName, itemUrl, itemImg, itemDesc, itemCost, itemOwned, ownedView } = this.props;
+        if(itemDesc == undefined){
+            itemDesc = ' ';
+        }
         if (ownedView && itemOwned) {
             return (
                 <div className='item'>
