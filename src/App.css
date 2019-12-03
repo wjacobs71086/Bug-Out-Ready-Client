@@ -44,4 +44,6 @@ a:visited {
   font-family: 'Bebas Neue', cursive;
  
 }
-
+* {
+  box-sizing: border-box;
+}

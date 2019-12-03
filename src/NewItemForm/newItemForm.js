@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Input } from '../Utils/Utils';
+import ItemsApiService from '../Services/items-api-service';
 
 export default class NewItemForm extends Component {
   static defaultProps = {
@@ -19,6 +20,14 @@ export default class NewItemForm extends Component {
 
   handleNewItemSubmit = ev => {
     ev.preventDefault();
+    const { item_name, url, img, description, est_cost } = ev.target;
+    console.log('item_name entered as', item_name.value);
+    console.log('url entered as', url.value);
+    console.log('img entered as', img.value);
+    console.log('description entered as', description.value);
+    console.log('est_cost entered as', est_cost.value);
+    // ItemsApiService.createNewItem( bag_id, item_name, url, img, description, est_cost)
+    // call a re-render of the page/ items/bagsList.
 
   };
 

@@ -27,6 +27,20 @@ const ItemsApiService = {
           : res.json()
       )
   },
+  createNewItem(bag_id, item_name, url, img, description, est_cost){
+    return fetch(`${config.API_ENDPOINT}/bag-home/${bag_id}`, {
+      headers: {
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
+      },
+      body: JSON.stringify(bag_id, item_name, url, img, description, est_cost)
+    })
+    .then(res => 
+      (!res.ok)
+        ? res.json().then(e => Promise.reject(e))
+        : res.json()
+      );
+  }
 }
 
 export default ItemsApiService;

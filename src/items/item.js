@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ItemsListContext from '../context/items-context';
 import './item.css';
+import ReadMoreReact from 'read-more-react';
 
 
 export class item extends Component {
@@ -14,10 +15,15 @@ export class item extends Component {
                     <div className="ImageContainer">
                         <img src={itemImg} alt="Item" id="img" />
                     </div>
-
                     <div className="desc_container">
                         <a className="itemName" id="title" href={itemUrl} rel="noopener" target="_blank">{itemName}</a>
-                        <p className='desc'>Description: {itemDesc}</p>
+                        <ReadMoreReact 
+                        text={itemDesc}
+                        className='desc'
+                        min={0}
+                        ideal={0}
+                        max={0}
+                        readMoreText='...more'/>
                     </div>
 
                     <div className='info'>
@@ -48,7 +54,13 @@ export class item extends Component {
 
                 <div className="desc_container">
                     <a className="itemName" id="title" href={itemUrl} rel="noopener" target="_blank">{itemName}</a>
-                    <p className='desc'>Description: {itemDesc}</p>
+                    <ReadMoreReact 
+                        className='desc'
+                        text={itemDesc}
+                        min={0}
+                        ideal={0}
+                        max={0}
+                        readMoreText='...more'/>
                 </div>
 
                 <div className='info'>

@@ -37,8 +37,114 @@ exports[`renders the UI as expected 1`] = `
      Estimated Cost for remaining items $
     0
   </h4>
+  <button
+    onClick={[Function]}
+  >
+     
+    Owned Items
+     
+  </button>
   <div
     className="itemsList"
   />
+  <form
+    className="NewItemForm"
+    onSubmit={[Function]}
+  >
+    <div
+      role="alert"
+    />
+    <div
+      className="item_name"
+    >
+      <label
+        className="NewItemForm__item_name"
+        htmlFor="NewItemForm__item_name"
+      >
+        Item name
+      </label>
+      <input
+        className="Input "
+        id="NewItemForm__item_name"
+        name="item_name"
+        placeholder="Flashlight"
+        required={true}
+      />
+    </div>
+    <div
+      className="item_url"
+    >
+      <label
+        className="NewItemForm__item_url"
+        htmlFor="NewItemForm__item_url"
+      >
+        Item Url
+      </label>
+      <input
+        className="Input "
+        id="NewItemForm__item_url"
+        name="url"
+        placeholder="www.amazon.com"
+        required={true}
+      />
+    </div>
+    <div
+      className="item_img"
+    >
+      <label
+        className="NewItemForm__item_img"
+        htmlFor="NewItemForm__item_img"
+      >
+        Item Image Url
+      </label>
+      <input
+        className="Input "
+        id="NewItemForm__item_img"
+        name="img"
+        placeholder="www.abc@123.com/123"
+        required={true}
+      />
+    </div>
+    <div
+      className="item_description"
+    >
+      <label
+        className="NewItemForm__item_description"
+        htmlFor="NewItemForm__item_description"
+      >
+        Item Description
+      </label>
+      <input
+        className="Input "
+        id="NewItemForm__item_description"
+        name="description"
+        placeholder="A must have"
+        required={true}
+      />
+    </div>
+    <div
+      className="item_cost"
+    >
+      <label
+        className="NewItemForm__item_cost"
+        htmlFor="NewItemForm__item_cost"
+      >
+        Item Estimated Cost
+      </label>
+      <input
+        className="Input "
+        id="NewItemForm__item_cost"
+        name="est_cost"
+        placeholder="15.99"
+        required={true}
+      />
+    </div>
+    <button
+      className="Button submit"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
 </div>
 `;

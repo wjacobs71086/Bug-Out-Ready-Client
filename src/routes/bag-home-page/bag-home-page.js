@@ -62,7 +62,9 @@ export class BagHomePage extends Component {
       </div>
     )
   }
-
+  handleNewItemForm =(ev) =>{
+    
+  }
 
   handleUpdate = (ev) => {
     ev.preventDefault();
@@ -127,7 +129,6 @@ export class BagHomePage extends Component {
           {this.renderLogoutLink()}
           {this.renderSwitchBagLink()}
         </div>
-        <img className="logo" src={BagLogo} alt="bag" />
          {this.renderCostRemainingItems()}
          <button onClick={this.handleOwnedSwitch}> {this.state.ownedView ? 'UnOwned Items' : 'Owned Items'} </button>
          <div className="itemsList">
