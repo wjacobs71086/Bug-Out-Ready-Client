@@ -15,35 +15,6 @@ export default class LoginForm extends Component {
     touched: false
   }
 
-  // validatePassword = (input) => {
-  //   const password = input.trim(); 
-  //   if (password.length === 0) { 
-  //     this.setState({
-  //       error: 'Password Field Is Empty'
-  //     })
-  //     console.log('password is empty');
-  //   }
-  //   return password;
-  // }
-
-  // handleChange = (e) => {
-  //   let password = e.target.value;
-  //   var matches = password.match(/\d+/g);
-  //   setTimeout((e) => {
-  //   if (matches !== null) {
-  //     console.log(matches);
-  //     this.setState({ 
-  //     password: password,
-  //     touched: true 
-  //   })
-  //   } else{
-  //     this.setState({
-  //       error: 'Password must contain a number'
-  //     })
-  //   }
-  // }, 3000);
-  // }
-
 
   handleSubmitJwtAuth = ev => {
     ev.preventDefault();

@@ -6,10 +6,15 @@ import BagsApiService from '../../Services/bags-api-service';
 import Item from '../../items/item';
 import TokenService from '../../Services/token-service';
 import { Link } from 'react-router-dom';
-
+import NewItemForm from '../../NewItemForm/newItemForm';
 
 export class BagHomePage extends Component {
   static contextType = ItemsListContext;
+
+  state = {
+    ownedView: false,
+  }
+
 
   componentDidMount() {
     this.context.clearError();
@@ -23,6 +28,14 @@ export class BagHomePage extends Component {
 
   handleLogoutClick = () => {
     TokenService.clearAuthToken();
+  }
+
+
+  handleOwnedSwitch = () => {
+    this.setState({
+      ownedView: !this.state.ownedView,
+    })
+
   }
 
   renderLogoutLink() {
@@ -72,10 +85,13 @@ export class BagHomePage extends Component {
         }
       });
   }
+
   renderBagItems() {
     const { bagsList = [] } = this.context;
+    
     return bagsList.map(item => <Item
       key={Math.random()}
+      ownedView={this.state.ownedView}
       itemId={item.item_id}
       itemName={item.item_name}
       itemUrl={item.url}
@@ -85,7 +101,9 @@ export class BagHomePage extends Component {
       itemOwned={item.owned}
       bag_id={this.props.match.params.bag_id}
       handleUpdate={this.handleUpdate}
-    />)
+    />
+    )
+
   }
 
   renderCostRemainingItems() {
@@ -111,6 +129,7 @@ export class BagHomePage extends Component {
         </div>
         <img className="logo" src={BagLogo} alt="bag" />
          {this.renderCostRemainingItems()}
+         <button onClick={this.handleOwnedSwitch}> {this.state.ownedView ? 'UnOwned Items' : 'Owned Items'} </button>
          <div className="itemsList">
            {this.renderBagItems()}
          </div>
