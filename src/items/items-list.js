@@ -1,3 +1,4 @@
+//--- This component is currently unused. 
 import React, { Component } from 'react';
 //import Item from './item';
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+//----- This is the context provider for the entire app. 
 const ItemsListContext = React.createContext({
   itemsList: [],
   bagsList: [],

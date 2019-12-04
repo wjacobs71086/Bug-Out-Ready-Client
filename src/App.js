@@ -4,12 +4,10 @@ import './App.css';
 import itemListPage from './items/items-list';
 import bagsListPage from './bags/bags-list';
 import LandingPage from './routes/landing-page/landing-page';
-import MyBagsPage from './routes/myBags/my-bags';
 import SituationPage from './routes/situation-page/situation-page'
 import SignupPage from './routes/sign-up/sign-up';
 import BagHomePage from './routes/bag-home-page/bag-home-page';
 import LoginPage from '../src/routes/LoginPage/LoginPage';
-//import PageNotFound from './routes/404-page/page-not-found';
 import PrivateRoute from './Utils/PrivateRoute';
 import PublicRoute from './Utils/PublicRoute'
 
@@ -32,11 +30,6 @@ class App extends Component {
           exact
           path={'/bags'}
           component={bagsListPage}
-        />
-        <Route
-          exact
-          path={'/my-bags'}
-          component={MyBagsPage}
         />
         <Route
           exact
