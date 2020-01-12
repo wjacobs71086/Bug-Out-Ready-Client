@@ -13,11 +13,11 @@
   justify-content: space-evenly;
 }
 .item{
-
   margin: 4%;
   padding: 2%;
-  border-radius: 25px;
-  border: 3px solid white;
+  border-radius: 10px;
+  background-color: white;
+  border: 2px solid white;
   flex: 2 1 300px;
 }
 .ImageContainer{
@@ -46,7 +46,7 @@
   padding-top:75%;
 }
 #title{
-  color: white;
+  color: #282c34;
   font-size: 3rem;
   margin-bottom: 0;
   margin-top: 0;
@@ -60,13 +60,27 @@
 }
 .desc{
   margin-top: 2%;
-  
+}
+.read-more-button{
+  cursor: pointer;
+}
+.displayed-text{
+  cursor: pointer;
+}
+.read-more-button:hover{
+  color: #09d3ac;
 }
 .owned_box{
   font-size: 2rem;
   margin-bottom: 2%;
+  margin-right: 20%;
 }
 .checkbox{
   margin-top: 2%;
-  transform: scale(1.5);
+  transform: scale(1.75);
+}
+.ownedContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
