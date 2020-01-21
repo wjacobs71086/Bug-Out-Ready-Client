@@ -4,7 +4,6 @@ import NewBagForm from '../../NewBagForm/NewBagForm';
 import BagLogo from '../../bags_bag_handbag_accessory_accessories-19-512.png';
 
 
-//----- This component handles the rendering of the page for creating a new bag. 
 export class SituationPage extends Component {
 
     render() {

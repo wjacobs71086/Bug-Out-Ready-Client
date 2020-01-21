@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import ItemsListContext from "../context/items-context";
 import "./item.css";
-//----- This is a node module for hiding text based on length.
 import ReadMoreReact from "read-more-react";
 
 export class item extends Component {
   static contextType = ItemsListContext;
 
-  //----- There is some conditional rendering. If in the ownedView then only items that you own should be displayed, and visa versa.
+ 
   render() {
     let {
       itemName,
@@ -18,11 +17,11 @@ export class item extends Component {
       itemOwned,
       ownedView
     } = this.props;
-    //----- The ReadMoreReact cannot get length if it's undefined so you have to have this as a safety measure.
+    
     if (itemDesc == undefined) {
       itemDesc = " ";
     }
-    //----- In the owned View and the item is owned, it will be displayed.
+    
     if (ownedView && itemOwned) {
       return (
         <div className="item">
@@ -65,13 +64,13 @@ export class item extends Component {
           </div>
         </div>
       );
-      //----- In the ownedView and the items is NOT owned, nothing is rendered.
+  
     } else if (ownedView && !itemOwned) {
       return <div></div>;
-      //----- In the Unowned View and the item us owned, Nothing is rendered.
+
     } else if (!ownedView && itemOwned) {
       return <div></div>;
-      //----- Anything else the items are rendered normally.
+      
     } else {
       return (
         <div className="item">

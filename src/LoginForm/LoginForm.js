@@ -3,7 +3,6 @@ import { Button, Input } from '../Utils/Utils';
 import TokenService from '../Services/token-service';
 import AuthApiService from '../Services/auth-api-service';
 
-//----- This component renders the login form and handles passing on the user input. 
 export default class LoginForm extends Component {
   static defaultProps = {
     onLoginSuccess: () => { }
@@ -13,11 +12,11 @@ export default class LoginForm extends Component {
     error: null,
     user_name: null,
     password: null,
-//----- Working on adding password validation as you type with a small delay based on if the field has been interacted with. 
+
     touched: false
   }
 
-//----- This gathers the data input and then uses the service function to create the POST request. 
+ 
   handleSubmitJwtAuth = ev => {
     ev.preventDefault();
     this.setState({
@@ -29,7 +28,7 @@ export default class LoginForm extends Component {
       user_name: user_name.value,
       password: password.value,
     })
-//----- Reset the state values, and save the AuthToken locally on the device. 
+
       .then(res => {
         user_name.value = '';
         password.value = '';

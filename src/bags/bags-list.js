@@ -6,11 +6,11 @@ import BagsApiService from '../Services/bags-api-service';
 import BagLogo from '../bags_bag_handbag_accessory_accessories-19-512.png';
 import './bags-list.css';
 
-//----- This component provides the list of bags associated with the user. 
+
 export class BagsList extends Component {
     static contextType = ItemsListContext;
 
-//----- On comomponent mounting it clears errors, and makes a fetch request to GET the bags. 
+
     componentDidMount() {
       this.context.clearError()
       BagsApiService.getThings()
@@ -18,7 +18,7 @@ export class BagsList extends Component {
         .catch(this.context.setError)
     }
     
-//----- Iterate over the list of bags and return instance of Bag for each. 
+ 
   renderBags() {
     const { bagsList = [] } = this.context;
     return bagsList.map(bag =>

@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { Button, Input, Required } from '../Utils/Utils';
 import './SignUpForm.css';
 import BagLogo from '../bags_bag_handbag_accessory_accessories-19-512.png';
-
-//----- This component is the form for signing up. 
+ 
 export default class SignUpForm extends Component {
   static defaultProps = {
     onSignUpSuccess: () => {}

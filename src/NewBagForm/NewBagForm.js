@@ -3,7 +3,6 @@ import { Button, Input } from '../Utils/Utils';
 import BagsApiService from '../Services/bags-api-service';
 import { Link } from 'react-router-dom';
 
-//----- This is renders the form for creating a new bag. 
 export default class NewBagForm extends Component {
   static defaultProps = {
     onBagCreationSuccess: () => {}
@@ -44,7 +43,7 @@ export default class NewBagForm extends Component {
             id='NewBagForm__bag_name'>
           </Input>
         </div>
-        {/* This is currently used for preset bags. If a user creates a new item the value for situation will be null and be pulled by bag_id for the user. */}
+    
         <select required name="situations" className='selector'>
           <option value="Everything">Everything</option>
           <option value="Quake">Earthquake</option>

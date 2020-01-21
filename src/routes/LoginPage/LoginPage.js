@@ -4,7 +4,7 @@ import LoginForm from '../../LoginForm/LoginForm';
 import { Link } from 'react-router-dom';
 import BagLogo from '../../bags_bag_handbag_accessory_accessories-19-512.png';
 
-//-----Handle to page to log in a user. On a successful login the user is taken to the /bags endpoint. 
+
 export class LoginPage extends Component {
     static defaultProps = {
         location: {},

@@ -1,6 +1,4 @@
-//--- This component is currently unused. 
 import React, { Component } from 'react';
-//import Item from './item';
 
 import ItemsListContext from '../context/items-context';
 import ItemsApiService from '../Services/items-api-service';
