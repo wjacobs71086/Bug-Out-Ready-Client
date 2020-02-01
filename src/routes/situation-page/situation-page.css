@@ -1,5 +1,9 @@
 
-
+.NewBagForm{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+}
 .selectionList{
     margin: 2%;
     padding:0;
@@ -11,6 +15,7 @@
 }
 .situationTitle{
     margin-bottom: 0;
+    font-size: 2rem;
 }
 .selection{
     margin: 2%;
@@ -20,20 +25,32 @@
     font-size: 1rem;
     margin: auto 2%;
 }
-.submit{
+.newBagButton{
     font-size: 1rem;
     color: black;
-    margin: auto 2%;
+    margin: 5%;
+    padding: .5rem 1rem;
+    background-color: white;
+    border-radius: 25px;
 }
 .bag_name{
     margin: 2%;
     padding: 2%;
 }
 #NewBagForm__bag_name{
-    margin-left: 5%;
+    font-size: 1.25rem;
 }
 .selector{
     font-size: 1rem;
+    color: black;
+    margin: 5% 0;
+    min-width: 150px;
+    max-width: 300px;
+    align-self: center;
+    background-color: white;
+}
+.selectorLabel{
+    font-size: 1.75rem;
 }
 .buttons{
     display: flex;

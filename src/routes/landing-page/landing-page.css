@@ -24,3 +24,8 @@ body{
 #loginButton:hover{
     Color:#09d3ac;
 }
+.landingBody{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 1rem;
+}

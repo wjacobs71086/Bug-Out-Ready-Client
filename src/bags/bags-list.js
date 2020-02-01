@@ -10,16 +10,32 @@ import './bags-list.css';
 export class BagsList extends Component {
     static contextType = ItemsListContext;
 
+    state= {
+      loading: false
+    }
 
     componentDidMount() {
       this.context.clearError()
+      
+      this.setState({
+        loading: true
+      })
       BagsApiService.getThings()
         .then(this.context.setBagsList)
         .catch(this.context.setError)
+      this.setState({
+        loading: false
+      })
     }
     
- 
   renderBags() {
+    if(this.state.loading === true){
+      return(
+        <div>
+          <h3>Loading</h3>
+        </div>
+      )
+    }
     const { bagsList = [] } = this.context;
     return bagsList.map(bag =>
       <Bag
@@ -37,6 +53,7 @@ export class BagsList extends Component {
                 <h3 className="header">My Bags</h3>
                 {this.renderBags()}
                 <Link
+                  id='newBagLink'
                   to='/situations'>+ New Bag</Link>
             </div>
         )

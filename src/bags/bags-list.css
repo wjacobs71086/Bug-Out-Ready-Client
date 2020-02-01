@@ -39,3 +39,14 @@
     margin-top: 10%;
     margin-bottom: 0;
 }
+#newBagLink{
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 25px;
+    padding: .5rem 1.5rem;
+    border: 2px solid grey;
+}
+#newBagLink:hover{
+    color: #09d3ac;
+    background-color: grey;
+}

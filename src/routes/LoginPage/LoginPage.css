@@ -7,6 +7,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0 10%;
 }
 .signUpLink{
     margin-top: 0;
@@ -23,30 +24,19 @@
 .red{
     color: red;
 }
-
-#LoginForm_password{
-    margin: 5%;
+.loginInput{
+    width: 75%;
+    margin: 3%;
+    font-size: 1.25rem;
 }
-#password{
-    width: 30%;
-    margin-right: 5%;
-    margin-left: 5%;
-}
-
-#LoginForm__user_name{
-    width: 30%;
-    margin-right: 5%;
-    margin-left: 5%;
-}
-.user_name{
-    width: 150%;
-}
-.password{
-    width:150%;
+.loginInput::placeholder{
+    color: rgb(202, 202, 202);
 }
 .login{
     margin-top: 5%;
-    width: 25%;
-    font-size: 1rem;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
     border-radius: 25px;
+    color: #282c34;
+    background-image: radial-gradient(rgb(219, 219, 219), rgb(194, 192, 192));
 }

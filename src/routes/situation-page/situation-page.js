@@ -10,7 +10,7 @@ export class SituationPage extends Component {
         return (
             <div>
                 <img className="logo" src={BagLogo} alt="bag" />
-                <h3 className='situationTitle'>What type of event are you wanting to prepare for?</h3>
+                <h3 className='situationTitle'>Create a new bag</h3>
             <NewBagForm
                 history={this.props.history}
             ></NewBagForm>
