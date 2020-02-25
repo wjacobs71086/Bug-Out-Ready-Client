@@ -10,7 +10,7 @@ exports[`renders the UI as expected 1`] = `
   <h3
     className="situationTitle"
   >
-    What type of event are you wanting to prepare for?
+    Create a new bag
   </h3>
   <div>
     <form
@@ -23,18 +23,19 @@ exports[`renders the UI as expected 1`] = `
       <div
         className="bag_name"
       >
-        <label
-          htmlFor="NewBagForm__bag_name"
-        >
-          Bag name
-        </label>
         <input
           className="Input "
           id="NewBagForm__bag_name"
           name="bag_name"
+          placeholder="Bag name"
           required={true}
         />
       </div>
+      <label
+        className="selectorLabel"
+      >
+        Bag designed for: 
+      </label>
       <select
         className="selector"
         name="situations"
@@ -65,13 +66,7 @@ exports[`renders the UI as expected 1`] = `
         className="buttons"
       >
         <button
-          className="Button submit"
-          type="submit"
-        >
-          Submit
-        </button>
-        <button
-          className="Button "
+          className="newBagButton"
         >
           <a
             href="/bags"
@@ -80,6 +75,12 @@ exports[`renders the UI as expected 1`] = `
           >
             Cancel
           </a>
+        </button>
+        <button
+          className="newBagButton"
+          type="submit"
+        >
+          Submit
         </button>
       </div>
     </form>

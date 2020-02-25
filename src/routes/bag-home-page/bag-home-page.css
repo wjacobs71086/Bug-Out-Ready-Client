@@ -41,14 +41,53 @@
 }
 .ownedButton{
     font-family: 'Teko', sans-serif;
-    background: transparent;
-    color: white;
-    border: transparent;
-    font-size: 2rem;
-}
-
-.ownedButton:hover{
-    Color:#09d3ac;
-    border: transparent;
+    font-size: 1.5rem;
+    background-color: transparent;
     border-radius: 25px;
+    padding: .5rem 1.5rem;
+    color: white;
+    border: 2px solid grey;
+    margin: 2%;
+}
+.bagPageButtonContainer{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2%;
+}
+.newFormButtonsContainer{
+    display: flex;
+    width:100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5%;
+}
+.ownedButton:hover{
+    color: #282c34;
+    background-color: grey;
+}
+.submit{
+    margin: 2%;
+    border-radius: 5px;
+    font-size: .75rem;
+    padding: .25rem .75rem;
+}
+.NewItemForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+}
+.item_cost, .item_name, .item_description, .item_url, .item_img{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3%;
+}
+.NewItemForm__item_name, .NewItemForm__item_url,.NewItemForm__item_img,.NewItemForm__item_description,.NewItemForm__item_cost {
+    margin-right: 0%;
+    align-self: center;
+}
+#NewItemForm__item_name, #NewItemForm__item_url,#NewItemForm__item_img,#NewItemForm__item_description,#NewItemForm__item_cost {
+    align-self: center;
 }

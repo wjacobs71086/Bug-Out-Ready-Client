@@ -27,13 +27,16 @@ const ItemsApiService = {
           : res.json()
       )
   },
-  createNewItem(bag_id, item_name, url, img, description, est_cost){
-    return fetch(`${config.API_ENDPOINT}/bag-home/${bag_id}`, {
+  createNewItem(item_name, url, img, description, est_cost, bag_id){
+
+    console.log(item_name, url, img, description, est_cost, bag_id.bag_id )
+    return fetch(`${config.API_ENDPOINT}/items`, {
+      method: `POST`,
       headers: {
         'content-type': 'application/json',
         'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
-      body: JSON.stringify(bag_id, item_name, url, img, description, est_cost)
+      body: JSON.stringify({item_name, url, img, description, est_cost, bag_id})
     })
     .then(res => 
       (!res.ok)

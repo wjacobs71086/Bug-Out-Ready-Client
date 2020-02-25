@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import { Button, Input } from '../Utils/Utils';
 import ItemsApiService from '../Services/items-api-service';
+import BagsApiService from "../Services/bags-api-service";
+import ItemsListContext from "../context/items-context";
+
 
 
 // Currently under construction. User beware. 
 export default class NewItemForm extends Component {
+  static contextType = ItemsListContext;
+
   static defaultProps = {
 
   }
@@ -23,14 +28,18 @@ export default class NewItemForm extends Component {
   handleNewItemSubmit = ev => {
     ev.preventDefault();
     const { item_name, url, img, description, est_cost } = ev.target;
-    console.log('item_name entered as', item_name.value);
-    console.log('url entered as', url.value);
-    console.log('img entered as', img.value);
-    console.log('description entered as', description.value);
-    console.log('est_cost entered as', est_cost.value);
-    // Successfully gathering the data but the server is not yet correctly adding new items. 
-    // ItemsApiService.createNewItem( bag_id, item_name, url, img, description, est_cost)
-    // call a re-render of the page/ items/bagsList.
+    let bag_id = this.props.bagId.bag_id;
+    ItemsApiService.createNewItem(item_name.value,url.value,img.value, description.value,est_cost.value,bag_id)
+      .then(res => console.log('this is the server response',res.end()))
+      .catch(err => console.log('this is the error',err))
+
+      BagsApiService.getBagsItems(bag_id)
+      .then(res => {
+        this.context.setItemsList(res);
+        this.context.setBagsList(res);
+      })
+      .catch(this.context.setError);
+       return this.props.handleNewItemButton()
   };
 
   render() {
@@ -45,7 +54,7 @@ export default class NewItemForm extends Component {
         </div>
         <div className='item_name'>
           <label htmlFor='NewItemForm__item_name' className='NewItemForm__item_name'>
-            Item name
+            Item: 
           </label>
           <Input
             required
@@ -57,7 +66,7 @@ export default class NewItemForm extends Component {
 
         <div className='item_url'>
           <label htmlFor='NewItemForm__item_url' className='NewItemForm__item_url'>
-            Item Url
+            Url: 
           </label>
           <Input
             required
@@ -69,7 +78,7 @@ export default class NewItemForm extends Component {
 
         <div className='item_img'>
           <label htmlFor='NewItemForm__item_img' className='NewItemForm__item_img'>
-            Item Image Url
+            Image Url: 
           </label>
           <Input
             required
@@ -81,7 +90,7 @@ export default class NewItemForm extends Component {
 
         <div className='item_description'>
           <label htmlFor='NewItemForm__item_description' className='NewItemForm__item_description'>
-            Item Description
+            Description: 
           </label>
           <Input
             required
@@ -93,7 +102,7 @@ export default class NewItemForm extends Component {
 
         <div className='item_cost'>
           <label htmlFor='NewItemForm__item_cost' className='NewItemForm__item_cost'>
-            Item Estimated Cost
+            Estimated Cost: 
           </label>
           <Input
             required
@@ -102,14 +111,20 @@ export default class NewItemForm extends Component {
             id='NewItemForm__item_cost'>
           </Input>
         </div>
-
-
+      <div className='newFormButtonsContainer'>
+        <Button 
+        onClick={() => this.props.handleCancel()}
+          className='submit'
+          >
+          Cancel
+        </Button>
         <Button 
           type='submit'
           className='submit'
           >
           Submit
         </Button>
+</div>
       </form>
     )
   }
