@@ -108,7 +108,7 @@ export class BagHomePage extends Component {
       newItemForm: !this.state.newItemForm
     });
   };
-
+//comment for commit and push
   renderFormOrItems = () => {
     if (this.state.newItemForm) {
       return (
