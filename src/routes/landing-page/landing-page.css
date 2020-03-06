@@ -21,6 +21,9 @@ body{
     font-family: 'Teko', sans-serif;
     font-size: 1.5rem;
 }
+#loginButton{
+    font-size: 3rem;
+}
 #loginButton:hover{
     Color:#09d3ac;
 }
@@ -28,4 +31,11 @@ body{
     font-size: 1.5rem;
     text-align: center;
     padding: 0 1rem;
+}
+
+@media screen and ( min-width: 500px){
+    .landingBody{
+        font-size: 2rem;
+        padding: 0 20vw;
+    }
 }

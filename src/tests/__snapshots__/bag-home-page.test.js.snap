@@ -29,7 +29,9 @@ exports[`renders the UI as expected 1`] = `
     </div>
   </div>
   <h3>
-     Estimated Cost for remaining items 
+     
+    Estimated Cost for remaining items
+     
     <span
       className="cost"
     >
@@ -37,14 +39,24 @@ exports[`renders the UI as expected 1`] = `
       0
     </span>
   </h3>
-  <button
-    className="ownedButton"
-    onClick={[Function]}
+  <div
+    className="bagPageButtonContainer"
   >
-     
-    View Owned Items
-     
-  </button>
+    <button
+      className="ownedButton"
+      onClick={[Function]}
+    >
+       
+      View Owned Items
+       
+    </button>
+    <button
+      className="ownedButton"
+      onClick={[Function]}
+    >
+      New Item Form
+    </button>
+  </div>
   <div
     className="itemsList"
   />
