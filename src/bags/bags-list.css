@@ -50,3 +50,10 @@
     color: #09d3ac;
     background-color: grey;
 }
+.loadingGif{
+    transform: scale(.5);
+}
+.loadingContainer{
+    width: 600px;
+    height: 300px;
+}

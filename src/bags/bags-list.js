@@ -5,7 +5,7 @@ import ItemsListContext from '../context/items-context';
 import BagsApiService from '../Services/bags-api-service';
 import BagLogo from '../bags_bag_handbag_accessory_accessories-19-512.png';
 import './bags-list.css';
-
+import loadingGif from '../BugoutProgressBar.gif';
 
 export class BagsList extends Component {
     static contextType = ItemsListContext;
@@ -23,27 +23,30 @@ export class BagsList extends Component {
       BagsApiService.getThings()
         .then(this.context.setBagsList)
         .catch(this.context.setError)
-      this.setState({
-        loading: false
-      })
+      return setTimeout(() => {
+        this.setState({
+          loading: false
+        })
+      }, 3000)
     }
     
   renderBags() {
+    const { bagsList = [] } = this.context;
     if(this.state.loading === true){
       return(
-        <div>
-          <h3>Loading</h3>
+        <div className='loadingContainer'>
+          <img src={loadingGif} alt='loading bar' className='loadingGif'/>
         </div>
       )
-    }
-    const { bagsList = [] } = this.context;
-    return bagsList.map(bag =>
+    } else {
+      return bagsList.map(bag =>
       <Bag
         key={Math.random()}
         bagId={bag.bag_id}
         bagName={bag.bag_name}
       />
     )
+    }
   }
 
     render() {

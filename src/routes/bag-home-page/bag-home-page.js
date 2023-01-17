@@ -9,7 +9,6 @@ import NewItemForm from "../../NewItemForm/newItemForm";
 
 export class BagHomePage extends Component {
   static contextType = ItemsListContext;
-
   state = {
     ownedView: false,
     newItemForm: false

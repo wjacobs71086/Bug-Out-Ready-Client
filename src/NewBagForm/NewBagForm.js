@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Input } from "../Utils/Utils";
+import { Input } from "../Utils/Utils";
 import BagsApiService from "../Services/bags-api-service";
 import { Link } from "react-router-dom";
 

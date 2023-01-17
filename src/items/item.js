@@ -18,7 +18,7 @@ export class item extends Component {
       ownedView
     } = this.props;
     
-    if (itemDesc == undefined) {
+    if (itemDesc === undefined) {
       itemDesc = " ";
     }
     
@@ -33,7 +33,7 @@ export class item extends Component {
               className="itemName"
               id="title"
               href={itemUrl}
-              rel="noopener"
+              rel="noopener noreferrer"
               target="_blank"
             >
               {itemName}
@@ -83,7 +83,7 @@ export class item extends Component {
               className="itemName"
               id="title"
               href={itemUrl}
-              rel="noopener"
+              rel="noopener noreferrer"
               target="_blank"
             >
               {itemName}
